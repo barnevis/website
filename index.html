@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنویس - ابزارهای مدرن نگارش پارسی</title>
+    
+    <!-- Vazirmatn Font -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4L6 14v20l18 10 18-10V14L24 4z" fill="currentColor" opacity="0.2"/>
+                        <path d="M24 4L6 14l18 10 18-10L24 4z" fill="currentColor"/>
+                        <path d="M6 14v20l18 10V24L6 14z" fill="currentColor" opacity="0.5"/>
+                        <path d="M42 14v20l-18 10V24l18-10z" fill="currentColor" opacity="0.7"/>
+                    </svg>
+                    <span class="logo-text">برنویس</span>
+                </div>
+                
+                <!-- Menu Items -->
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <button class="flex items-center dropdown-toggle">
+                            ابزارها
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#parsneshan">
+                                <div>پارس‌نشان</div>
+                                <div>مفسر مارک‌داون</div>
+                            </a>
+                            <a href="#dabir">
+                                <div>دبیر</div>
+                                <div>ویرایشگر مینیمال</div>
+                            </a>
+                            <a href="#parsinegar">
+                                <div>پارسی‌نگار</div>
+                                <div>ویرایشگر پیشرفته</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#compare">مقایسه</a>
+                    <a href="#blog">وبلاگ</a>
+                    <a href="#about">درباره</a>
+                </div>
+                
+                <!-- GitHub Button -->
+                <a href="https://github.com/barnevis" target="_blank" class="btn btn-github">
+                    <svg class="github-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>برنویس: مجموعه ابزارهای مدرن برای نگارش پارسی</h1>
+                <p class="subtitle">اکوسیستم متن‌باز برنویس، مجموعه‌ای از ابزارهای قدرتمند برای نگارش، ویرایش و نمایش محتوای فارسی با استاندارد مارک‌داون</p>
+                <a href="#ai-story" class="hero-ai-badge">
+                    <span class="material-symbols-outlined">bolt</span>
+                    <span>ساخته شده با هوش مصنوعی</span>
+                </a>
+                <div class="hero-buttons">
+                    <a href="#tools" class="btn btn-hero-primary">ابزارها</a>
+                    <a href="https://github.com/barnevis" target="_blank" class="btn btn-hero-secondary">
+                        <svg class="github-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>ابزارهای برنویس</h2>
+                <p>سه ابزار قدرتمند که هر کدام برای نیاز خاصی طراحی شده‌اند</p>
+            </div>
+            
+            <div class="tools-grid">
+                <!-- ParsNeshan Card -->
+                <div id="parsneshan" class="project-card">
+                    <div class="card-icon-wrapper card-icon-blue">
+                        <span class="material-symbols-outlined">code</span>
+                    </div>
+                    <h3>پارس‌نشان</h3>
+                    <p class="card-description">مفسر قدرتمند مارک‌داون برای توسعه‌دهندگان. به سادگی نوشتار فارسی را در پروژه‌های خود زنده کنید.</p>
+                    <ul>
+                        <li>• تشخیص خودکار جهت متن</li>
+                        <li>• پشتیبانی از اعداد فارسی</li>
+                        <li>• جعبه‌های توضیحی زیبا</li>
+                    </ul>
+                    <div class="card-buttons">
+                        <a href="#" class="btn-primary">مستندات</a>
+                        <a href="#" class="btn-secondary">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Dabir Card -->
+                <div id="dabir" class="project-card">
+                    <div class="card-icon-wrapper card-icon-green">
+                        <span class="material-symbols-outlined">edit_square</span>
+                    </div>
+                    <h3>دبیر</h3>
+                    <p class="card-description">ویرایشگر کمینه‌گرا و هوشمند برای نوشتن روان و بدون حواس‌پرتی. ایده‌آل برای یادداشت‌های روزانه.</p>
+                    <ul>
+                        <li>• ویرایش درجا و هوشمند</li>
+                        <li>• میانبرهای کیبورد جامع</li>
+                        <li>• ذخیره‌سازی خودکار</li>
+                    </ul>
+                    <div class="card-buttons">
+                        <a href="#demo" class="btn-primary btn-green">دموی زنده</a>
+                        <a href="#" class="btn-secondary">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- ParsiNegar Card -->
+                <div id="parsinegar" class="project-card">
+                    <div class="card-icon-wrapper card-icon-purple">
+                        <span class="material-symbols-outlined">article</span>
+                    </div>
+                    <h3>پارسی‌نگار</h3>
+                    <p class="card-description">ویرایشگر پیشرفته با تمام امکانات. برای تولید محتوای جدی، از مقالات تا مستندات فنی.</p>
+                    <ul>
+                        <li>• خروجی PDF و HTML</li>
+                        <li>• نمودار و نقشه ذهنی</li>
+                        <li>• پشتیبانی از چند مفسر</li>
+                    </ul>
+                    <div class="card-buttons">
+                        <a href="#demo" class="btn-primary btn-purple">دموی زنده</a>
+                        <a href="#" class="btn-secondary">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo" class="section-padding demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>جادوی برنویس را تجربه کنید</h2>
+                <p>ویرایشگر «دبیر» را همین‌جا امتحان کنید. متن دلخواه خود را بنویسید یا از نمونه‌های آماده استفاده کنید.</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-toolbar">
+                    <button>نمونه شعر</button>
+                    <button>نمونه لیست</button>
+                    <button>نمونه جدول</button>
+                    <button>جعبه توضیحی</button>
+                </div>
+                <div class="demo-editor">
+                    <div class="demo-placeholder">
+                        <span class="material-symbols-outlined">edit</span>
+                        <p>محل قرارگیری ویرایشگر تعاملی</p>
+                        <p class="text-sm">در نسخه نهایی، ویرایشگر «دبیر» اینجا بارگذاری خواهد شد</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>چرا برنویس؟</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-wrapper icon-blue">
+                        <span class="material-symbols-outlined">translate</span>
+                    </div>
+                    <h3>تمرکز بر فارسی</h3>
+                    <p>طراحی شده از پایه برای نوشتار راست-به-چپ و چالش‌های زبان فارسی.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-wrapper icon-green">
+                        <span class="material-symbols-outlined">groups</span>
+                    </div>
+                    <h3>متن‌باز و جامعه‌محور</h3>
+                    <p>توسعه یافته توسط جامعه، برای جامعه. شما هم می‌توانید بخشی از این حرکت باشید.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-wrapper icon-purple">
+                        <span class="material-symbols-outlined">verified</span>
+                    </div>
+                    <h3>استاندارد و مدرن</h3>
+                    <p>بر پایه جدیدترین فناوری‌های وب و سازگار با استاندارد جهانی مارک‌داون.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-wrapper icon-orange">
+                        <span class="material-symbols-outlined">extension</span>
+                    </div>
+                    <h3>یکپارچه و گسترش‌پذیر</h3>
+                    <p>از یک مفسر ساده تا ویرایشگرهای پیشرفته، همه در یک اکوسیستم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Story Section -->
+    <section class="section-padding ai-story-section" id="ai-story">
+        <div class="container">
+            <div class="ai-story-container">
+                <div class="section-header">
+                    <div class="ai-badge">
+                        <span class="material-symbols-outlined">auto_awesome</span>
+                        <span>ساخته شده با هوش مصنوعی</span>
+                    </div>
+                    <h2><span class="gradient-text">داستان متفاوت برنویس</span></h2>
+                    <p>من توسعه‌دهنده نیستم، اما با قدرت هوش مصنوعی، رویای ساخت ابزارهای فارسی را به واقعیت تبدیل کردم.</p>
+                </div>
+
+                <div class="story-content-box">
+                    <div class="story-item">
+                        <div class="icon-wrapper story-icon-purple">
+                            <span class="material-symbols-outlined">bolt</span>
+                        </div>
+                        <div>
+                            <h3>شروع یک سفر جادویی</h3>
+                            <p>تمام پروژه‌های برنویس بدون نوشتن حتی یک خط کد به صورت دستی ساخته شده‌اند. من با استفاده از مدل‌های هوش مصنوعی پیشرفته، ایده‌هایم را به کد تبدیل کردم.</p>
+                        </div>
+                    </div>
+                    <div class="story-item">
+                        <div class="icon-wrapper story-icon-green">
+                            <span class="material-symbols-outlined">rocket_launch</span>
+                        </div>
+                        <div>
+                            <h3>اثبات یک مفهوم مهم</h3>
+                            <p>این پروژه‌ها اثبات می‌کنند که هوش مصنوعی دروازه‌های جدیدی از خلاقیت و نوآوری را برای همه باز کرده است. اگر ایده دارید و می‌دانید چه می‌خواهید، AI می‌تواند پل بین تصور و واقعیت باشد.</p>
+                        </div>
+                    </div>
+                    <div class="story-item">
+                        <div class="icon-wrapper story-icon-orange">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </div>
+                        <div>
+                            <h3>دعوت به همراهی</h3>
+                            <p>اگر شما هم ایده‌ای دارید، منتظر نمانید! از قدرت AI استفاده کنید، خلق کنید، و با جامعه به اشتراک بگذارید.  برنویس نه تنها مجموعه‌ای از ابزارها، بلکه نمادی از این دوران جدید است - دورانی که در آن همه می‌توانند سازنده باشند.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-tools-box">
+                    <h3>ابزارهای هوش مصنوعی که این سفر را ممکن کردند</h3>
+                    <div class="ai-tools-grid">
+                        <div class="ai-tool-item">
+                            <div class="tool-icon-wrapper tool-icon-purple">
+                                <span class="material-symbols-outlined">psychology</span>
+                            </div>
+                            <h4>Claude AI</h4>
+                            <p>معمار اصلی کد و منطق</p>
+                            <span class="company-tag tag-purple">Anthropic</span>
+                        </div>
+                        <div class="ai-tool-item">
+                            <div class="tool-icon-wrapper tool-icon-green">
+                                <span class="material-symbols-outlined">chat</span>
+                            </div>
+                            <h4>ChatGPT</h4>
+                            <p>مشاور و حل‌کننده مشکلات</p>
+                            <span class="company-tag tag-green">OpenAI</span>
+                        </div>
+                        <div class="ai-tool-item">
+                            <div class="tool-icon-wrapper tool-icon-blue">
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <h4>Gemini</h4>
+                            <p>کمک در بهینه‌سازی و رفع باگ</p>
+                            <span class="company-tag tag-blue">Google</span>
+                        </div>
+                        <div class="ai-tool-item">
+                            <div class="tool-icon-wrapper tool-icon-orange">
+                                <span class="material-symbols-outlined">terminal</span>
+                            </div>
+                            <h4>Google AI Studio</h4>
+                            <p>آزمایش و تنظیم پرامپت‌ها</p>
+                            <span class="company-tag tag-orange">Google</span>
+                        </div>
+                        <div class="ai-tool-item">
+                            <div class="tool-icon-wrapper tool-icon-rose">
+                                <span class="material-symbols-outlined">dashboard_customize</span>
+                            </div>
+                            <h4>Google Stitch</h4>
+                            <p>طراحی سریع رابط کاربری</p>
+                            <span class="company-tag tag-rose">Google</span>
+                        </div>
+                        <div class="ai-tool-item">
+                            <div class="tool-icon-wrapper tool-icon-indigo">
+                                <span class="material-symbols-outlined">more_horiz</span>
+                            </div>
+                            <h4>سایر ابزارها</h4>
+                            <p>کمک‌های موردی و تخصصی</p>
+                            <span class="company-tag tag-indigo">مختلف</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inspiring-message">
+                    <span class="material-symbols-outlined">lightbulb</span>
+                    <h3>شما هم می‌توانید!</h3>
+                    <p>اگر من توانستم بدون دانش برنامه‌نویسی این ابزارها را بسازم، شما هم می‌توانید ایده‌های خود را به واقعیت تبدیل کنید. </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-hero-primary">داستان کامل را بخوانید</a>
+                        <a href="#" class="btn btn-hero-secondary">آموزش ساخت با AI</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding cta-section">
+        <div class="container">
+            <div class="section-header cta-header">
+                <h2>به خانواده برنویس بپیوندید</h2>
+                <p>برنویس یک پروژه متن‌باز است و با کمک شما رشد می‌کند. گزارش خطا، ارائه پیشنهاد یا مشارکت در کدنویسی، هر کمکی ارزشمند است.</p>
+            </div>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-hero-primary">راهنمای مشارکت</a>
+                <a href="#" class="btn btn-hero-secondary">گزارش خطا</a>
+                <a href="#" class="btn btn-hero-secondary">مشاهده در GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>درباره برنویس</h3>
+                    <p class="footer-text">مجموعه ابزارهای متن‌باز برای نگارش و ویرایش محتوای فارسی با استاندارد مارک‌داون.</p>
+                </div>
+                <div>
+                    <h3>دسترسی سریع</h3>
+                    <ul>
+                        <li><a href="#">مستندات</a></li>
+                        <li><a href="#">راهنمای شروع</a></li>
+                        <li><a href="#">نمونه‌ها</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>جامعه</h3>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">تلگرام</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>قوانین</h3>
+                    <ul>
+                        <li><a href="#">مجوز استفاده</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© ۱۴۰۳ برنویس - تمامی حقوق محفوظ است | ساخته شده با ❤️ برای جامعه فارسی‌زبان</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
