@@ -217,9 +217,18 @@ a {
 }
 
 .hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 2.5rem;
+    line-height: 1.1;
+}
+
+.hero-content .hero-tagline {
     font-size: 2.25rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-weight: 600; /* وزن فونت معمولی */
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: var(--white);
 }
 
 .hero-content .subtitle {
@@ -867,7 +876,10 @@ a {
     }
     
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 6rem;
+    }
+    .hero-content .hero-tagline {
+        font-size: 2.5rem;
     }
     
     .hero-content .subtitle {
@@ -901,7 +913,7 @@ a {
 
 @media (min-width: 1024px) {
     .hero-content h1 {
-        font-size: 3.75rem;
+        font-size: 6rem; /* بسیار بسیار بزرگتر در دسکتاپ */
     }
     
     .features-grid {
