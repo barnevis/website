@@ -182,16 +182,24 @@ a {
     transition: background-color 0.3s ease;
 }
 
-.btn-github {
-    background-color: var(--gray-900);
-    color: var(--white);
+/* Style for the Header's GitHub button specifically */
+.main-header .btn-github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--gray-900); /* پس‌زمینه مشکی */
+    color: var(--white); /* متن سفید */
+    transition: background-color 0.3s ease;
 }
 
-.btn-github:hover {
-    background-color: var(--gray-700);
-}
-
-.github-icon {
+/* اطمینان از اینکه آیکون داخل دکمه هدر اندازه مناسب دارد */
+.main-header .github-icon {
     width: 1.25rem;
     height: 1.25rem;
 }
@@ -320,7 +328,6 @@ a {
   }
 }
 
-/* The main card container */
 .project-card {
   position: relative;
   display: flex;
@@ -329,9 +336,20 @@ a {
   overflow: hidden;
   border-radius: 1rem; /* 16px */
   background-color: var(--white);
-  /* Add transition for hover effect */
-  transition: background-color 0.3s ease;
+  
+  /* --- New styles for better separation --- */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* حاشیه بسیار کم‌رنگ */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* سایه بسیار ملایم */
+  
+  /* Transition for both background and box-shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* همچنین می‌توانید یک سایه قوی‌تر برای حالت هاور اضافه کنید */
+.project-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* سایه کمی قوی‌تر در هاور */
+}
+
 
 /* The rotating spotlight element */
 .project-card::before {
