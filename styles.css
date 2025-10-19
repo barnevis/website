@@ -920,3 +920,39 @@ a {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+/* --- Typewriter Effect Styles (Simplified) --- */
+.typewriter-text {
+    display: inline;
+}
+
+/* Initially hide buttons and badge for fade-in effect */
+.hero-ai-badge,
+.hero-buttons {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Fade-in animation class */
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Ensure proper spacing during animation */
+.hero-content .hero-tagline {
+    min-height: 2rem; /* Prevents layout shift */
+}
+
+.hero-content .subtitle {
+    min-height: 3.5rem; /* Prevents layout shift */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-content .subtitle {
+        min-height: 5rem; /* More height for wrapped text on mobile */
+    }
+}
+
