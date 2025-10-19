@@ -381,40 +381,95 @@ a {
     transition: background-color 0.3s ease;
 }
 
-.project-card .card-buttons .btn-primary {
-    background-color: #eff6ff;
+/* --- Animated Buttons for Project Cards --- */
+.project-card .card-buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.project-card .btn-animated {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    text-decoration: none;
+}
+
+/* First span - Text */
+.project-card .btn-animated span:first-child {
+    position: relative;
+    z-index: 1;
+    transition: color 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Second span - Ripple effect */
+.project-card .btn-animated span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Demo Button Styles */
+.project-card .btn-demo {
     color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f620;
 }
 
-.project-card .card-buttons .btn-primary:hover {
-    background-color: #dbeafe;
+.project-card .btn-demo span:last-child {
+    background-color: #3b82f6;
 }
 
-/* .btn-green {
-    background-color: #f0fdf4 !important;
-    color: #22c55e !important;
+.project-card .btn-demo:hover {
+    box-shadow: 0 0 0 2px #3b82f640;
+    color: #ffffff;
 }
 
-.btn-green:hover {
-    background-color: #dcfce7 !important;
+.project-card .btn-demo:hover span:last-child {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
 }
 
-.btn-purple {
-    background-color: #f5f3ff !important;
-    color: #8b5cf6 !important;
-}
-
-.btn-purple:hover {
-    background-color: #ede9fe !important;
-} */
-
-.project-card .card-buttons .btn-secondary {
-    background-color: var(--gray-100);
+/* GitHub Button Styles */
+.project-card .btn-github {
     color: var(--gray-700);
+    box-shadow: 0 0 0 1px var(--gray-200);
 }
 
-.project-card .card-buttons .btn-secondary:hover {
-    background-color: var(--gray-200);
+.project-card .btn-github span:last-child {
+    background-color: var(--gray-900);
+}
+
+.project-card .btn-github:hover {
+    box-shadow: 0 0 0 2px var(--gray-400);
+    color: #ffffff;
+}
+
+.project-card .btn-github:hover span:last-child {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+}
+
+/* Active state for both buttons */
+.project-card .btn-animated:active {
+    transform: scale(0.95);
 }
 
 /* Logo wrapper for project cards */
