@@ -928,7 +928,7 @@ a {
 
 /* Initially hide buttons and badge for fade-in effect */
 .hero-ai-badge,
-.hero-buttons {
+.hero-content div {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
