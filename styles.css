@@ -308,19 +308,92 @@ a {
     margin: auto;
 }
 
+/* --- Animated Border Cards (New Style) --- */
+
+/* Keyframes for the rotation animation */
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* The main card container */
 .project-card {
-    background-color: var(--white);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    border: 1px solid var(--gray-200);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 1rem; /* 16px */
+  background-color: var(--white);
+  /* Add transition for hover effect */
+  transition: background-color 0.3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+/* The rotating spotlight element */
+.project-card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 150%;
+  animation: rotBGimg 4s linear infinite;
+  transition: opacity 0.3s ease;
 }
 
+/* The inner mask that creates the border effect */
+.project-card::after {
+  content: '';
+  position: absolute;
+  background: var(--white);
+  inset: 3px; /* This creates the 3px border */
+  border-radius: 13px; /* Slightly smaller than parent's radius */
+  z-index: 2; /* Sits on top of the spotlight */
+}
+
+/* Color variations for the rotating spotlight */
+.project-card-blue::before {
+  background-color: var(--blue-600);
+}
+.project-card-green::before {
+  background-color: var(--green-600);
+}
+.project-card-purple::before {
+  background-color: var(--purple-600);
+}
+
+/* --- Hover State --- */
+/* On hover, hide the rotating spotlight */
+.project-card:hover::before {
+  opacity: 0;
+}
+/* On hover, change the main card's background to create a solid border */
+.project-card-blue:hover {
+  background-color: var(--blue-600);
+}
+.project-card-green:hover {
+  background-color: var(--green-600);
+}
+.project-card-purple:hover {
+  background-color: var(--purple-600);
+}
+
+/* The content wrapper that sits on top of everything */
+.card-content {
+  position: relative;
+  z-index: 3; /* Sits on top of the inner mask */
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Styles for content inside the card --- */
+
+/* Keep the previous icon/logo styles */
 .card-icon-wrapper {
     width: 4rem;
     height: 4rem;
@@ -330,173 +403,50 @@ a {
     justify-content: center;
     margin-bottom: 1rem;
 }
-
 .card-icon-wrapper .material-symbols-outlined {
     font-size: 2rem;
     color: var(--white);
 }
-
-.card-icon-blue {
-    background: linear-gradient(to bottom right, #3b82f6, #60a5fa);
-}
-
-.card-icon-green {
-    background: linear-gradient(to bottom right, #16a34a, #4ade80);
-}
-
-.card-icon-purple {
-    background: linear-gradient(to bottom right, #7c3aed, #a78bfa);
-}
-
-.project-card h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.project-card .card-description {
-    color: var(--gray-600);
-    margin-bottom: 1rem;
-}
-
-.project-card ul {
-    list-style: none;
-    font-size: 0.875rem;
-    color: var(--gray-600);
-    margin-bottom: 1rem;
-    padding-right: 0;
-}
-
-.project-card .card-buttons {
-    display: flex;
-    gap: 0.75rem;
-}
-
-.project-card .card-buttons a {
-    flex: 1;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 0.875rem;
-    transition: background-color 0.3s ease;
-}
-
-/* --- Animated Buttons for Project Cards --- */
-.project-card .card-buttons {
-    display: flex;
-    gap: 0.75rem;
-}
-
-.project-card .btn-animated {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    padding: 0.5rem 1rem;
-    border: none;
-    font-size: 0.875rem;
-    font-weight: 600;
-    background-color: transparent;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-    text-decoration: none;
-}
-
-/* First span - Text */
-.project-card .btn-animated span:first-child {
-    position: relative;
-    z-index: 1;
-    transition: color 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-/* Second span - Ripple effect */
-.project-card .btn-animated span:last-child {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-/* Demo Button Styles */
-.project-card .btn-demo {
-    color: #3b82f6;
-    box-shadow: 0 0 0 1px #3b82f620;
-}
-
-.project-card .btn-demo span:last-child {
-    background-color: #3b82f6;
-}
-
-.project-card .btn-demo:hover {
-    box-shadow: 0 0 0 2px #3b82f640;
-    color: #ffffff;
-}
-
-.project-card .btn-demo:hover span:last-child {
-    width: 200px;
-    height: 200px;
-    opacity: 1;
-}
-
-/* GitHub Button Styles */
-.project-card .btn-github {
-    color: var(--gray-700);
-    box-shadow: 0 0 0 1px var(--gray-200);
-}
-
-.project-card .btn-github span:last-child {
-    background-color: var(--gray-900);
-}
-
-.project-card .btn-github:hover {
-    box-shadow: 0 0 0 2px var(--gray-400);
-    color: #ffffff;
-}
-
-.project-card .btn-github:hover span:last-child {
-    width: 200px;
-    height: 200px;
-    opacity: 1;
-}
-
-/* Active state for both buttons */
-.project-card .btn-animated:active {
-    transform: scale(0.95);
-}
-
-/* Logo wrapper for project cards */
+.card-icon-blue { background: linear-gradient(to bottom right, #3b82f6, #60a5fa); }
 .card-logo-wrapper {
-    width: 4rem;
-    height: 4rem;
+    width: 4rem; height: 4rem; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem; padding: 0.5rem; background: var(--gray-50); border-radius: 0.5rem; border: 1px solid var(--gray-200);
+}
+.project-logo { width: 100%; height: 100%; object-fit: contain; }
+
+/* Keep text styles */
+.card-content h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+.card-content .card-description { color: var(--gray-600); margin-bottom: 1rem; flex-grow: 1; }
+.card-content ul { list-style: none; font-size: 0.875rem; color: var(--gray-600); padding-right: 0; margin-bottom: 1.5rem; }
+
+/* Keep animated button styles */
+.card-buttons {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    background: var(--gray-50);
-    border-radius: 0.5rem;
-    border: 1px solid var(--gray-200);
+    gap: 0.75rem;
+    margin-top: auto; /* Pushes buttons to the bottom */
 }
 
-.project-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.btn-animated {
+    position: relative; display: inline-flex; align-items: center; justify-content: center;
+    flex: 1; padding: 0.5rem 1rem; border: none; font-size: 0.875rem; font-weight: 600;
+    background-color: transparent; border-radius: 0.5rem; cursor: pointer; overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); text-decoration: none;
 }
+.btn-animated span:first-child { position: relative; z-index: 1; transition: color 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+.btn-animated span:last-child {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 20px; height: 20px; border-radius: 50%; opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.btn-demo { color: #3b82f6; box-shadow: 0 0 0 1px #3b82f620; }
+.btn-demo span:last-child { background-color: #3b82f6; }
+.btn-demo:hover { box-shadow: 0 0 0 2px #3b82f640; color: #ffffff; }
+.btn-github { color: var(--gray-700); box-shadow: 0 0 0 1px var(--gray-200); }
+.btn-github span:last-child { background-color: var(--gray-900); }
+.btn-github:hover { box-shadow: 0 0 0 2px var(--gray-400); color: #ffffff; }
+.btn-animated:hover span:last-child { width: 200px; height: 200px; opacity: 1; }
+.btn-animated:active { transform: scale(0.95); }
 
-/* Hover effect for logo */
-.project-card:hover .card-logo-wrapper {
-    background: var(--white);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
 
 
 /* --- Demo Section --- */
