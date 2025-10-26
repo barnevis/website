@@ -97,9 +97,9 @@ a {
 }
 
 .logo-container .logo-icon {
-    width: 2rem;
-    height: 2rem;
-    color: var(--purple-600);
+    height: 2.5rem; /* کمی ارتفاع را تنظیم کنید تا بهترین ظاهر را داشته باشد */
+    width: auto;
+    margin-bottom: 10px;
 }
 
 .logo-container .logo-text {
