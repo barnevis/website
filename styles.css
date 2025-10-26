@@ -1006,3 +1006,78 @@ a {
     }
 }
 
+/* --- New Card Badge Styles --- */
+.card-dev-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem; /* Changed to left for better RTL alignment */
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.7rem; /* Smaller font */
+    font-weight: 600;
+    border-radius: 9999px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.card-dev-badge .material-symbols-outlined {
+    font-size: 0.8rem; /* Smaller icon */
+}
+
+.project-card:hover .card-dev-badge {
+    opacity: 1;
+}
+
+/* Badge for AI developed projects */
+.badge-ai {
+    background-color: #ede9fe; /* light purple */
+    color: var(--purple-600);
+}
+
+/* Badge for Human developed projects */
+.badge-human {
+    background-color: #dcfce7; /* light green */
+    color: var(--green-600);
+}
+
+/* --- New Card Color and Icon Styles --- */
+/* Indigo for ZehnNegar */
+.project-card-indigo::before {
+  background-color: var(--indigo-600);
+}
+.project-card-indigo:hover {
+  background-color: var(--indigo-600);
+}
+.card-icon-indigo {
+  background: linear-gradient(to bottom right, #4f46e5, #818cf8);
+}
+
+/* Orange for Korase */
+.project-card-orange::before {
+  background-color: var(--orange-600);
+}
+.project-card-orange:hover {
+  background-color: var(--orange-600);
+}
+.card-icon-orange {
+  background: linear-gradient(to bottom right, #ea580c, #fb923c);
+}
+
+/* Teal for ShahNeshan */
+.project-card-teal::before {
+  background-color: #0d9488; /* teal-600 */
+}
+.project-card-teal:hover {
+  background-color: #0d9488;
+}
+.card-icon-teal {
+  background: linear-gradient(to bottom right, #0d9488, #2dd4bf);
+}
+
+/* Ensure the card content padding doesn't clash with the badge */
+.card-content {
+    padding-top: 2rem; /* Increased top padding */
+}
