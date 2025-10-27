@@ -395,7 +395,7 @@ a {
   position: absolute;
   width: 100px;
   height: 150%;
-  animation: rotBGimg 4s linear infinite;
+  animation: rotBGimg 6s linear infinite;
   transition: opacity 0.3s ease;
 }
 
@@ -411,13 +411,13 @@ a {
 
 /* Color variations for the rotating spotlight */
 .project-card-blue::before {
-  background-color: var(--blue-600);
+  background-color: #2563eb69;
 }
 .project-card-green::before {
-  background-color: var(--green-600);
+  background-color: #16a34a5e;
 }
 .project-card-purple::before {
-  background-color: var(--purple-600);
+  background-color: #7c3aed69;
 }
 
 /* --- Hover State --- */
@@ -1113,7 +1113,7 @@ a {
 /* --- New Card Color and Icon Styles --- */
 /* Indigo for ZehnNegar */
 .project-card-indigo::before {
-  background-color: var(--indigo-600);
+  background-color: #4f46e552;
 }
 .project-card-indigo:hover {
   background-color: var(--indigo-600);
@@ -1124,7 +1124,7 @@ a {
 
 /* Orange for Korase */
 .project-card-orange::before {
-  background-color: var(--orange-600);
+  background-color: #ea580c5c;
 }
 .project-card-orange:hover {
   background-color: var(--orange-600);
@@ -1135,7 +1135,7 @@ a {
 
 /* Teal for ShahNeshan */
 .project-card-teal::before {
-  background-color: #0d9488; /* teal-600 */
+  background-color: #0d948866; /* teal-600 */
 }
 .project-card-teal:hover {
   background-color: #0d9488;
