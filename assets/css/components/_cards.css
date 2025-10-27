@@ -1,0 +1,173 @@
+/* assets/css/components/_cards.css */
+
+/* --- Animated Border Cards (New Style) --- */
+
+/* Keyframes for the rotation animation */
+@keyframes rotBGimg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* The rotating spotlight element */
+.project-card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 150%;
+  animation: rotBGimg 6s linear infinite;
+  transition: opacity 0.3s ease;
+}
+
+/* The inner mask that creates the border effect */
+.project-card::after {
+  content: '';
+  position: absolute;
+  background: var(--white);
+  inset: 3px; /* border width */
+  border-radius: 13px;
+  z-index: 2;
+}
+
+/* Color variations for the rotating spotlight */
+.project-card-blue::before { background-color: #2563eb69; }
+.project-card-green::before { background-color: #16a34a5e; }
+.project-card-purple::before { background-color: #7c3aed69; }
+
+/* Hover State */
+.project-card:hover::before { opacity: 0; }
+.project-card-blue:hover { background-color: var(--blue-600); }
+.project-card-green:hover { background-color: var(--green-600); }
+.project-card-purple:hover { background-color: var(--purple-600); }
+
+/* The content wrapper that sits on top of everything */
+.card-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  padding-top: 2rem; /* جلوگیری از تداخل با badge */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Icon/logo blocks */
+.card-icon-wrapper,
+.card-logo-wrapper {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+.card-icon-wrapper .material-symbols-outlined {
+    font-size: 2rem;
+    color: var(--white);
+}
+.card-logo-wrapper {
+    padding: 0.5rem;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+}
+.project-logo { width: 100%; height: 100%; object-fit: contain; }
+
+/* Icon gradients */
+.card-icon-blue   { background: linear-gradient(to bottom right, #3b82f6, #60a5fa); }
+.card-icon-green  { background: linear-gradient(to bottom right, #16a34a, #4ade80); }
+.card-icon-purple { background: linear-gradient(to bottom right, #7c3aed, #a78bfa); }
+
+/* Text inside card */
+.card-content h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+.card-content .card-description { color: var(--gray-600); margin-bottom: 1rem; flex-grow: 1; }
+.card-content ul { list-style: none; font-size: 0.875rem; color: var(--gray-600); padding-right: 0; margin-bottom: 1.5rem; }
+
+/* Buttons row inside card (layout container only) */
+.card-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto; /* push to bottom */
+}
+
+/* --- Badge on cards --- */
+.card-dev-badge {
+    position: absolute;
+    top: 7rem;
+    left: 1rem; /* RTL corner */
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+.card-dev-badge .material-symbols-outlined { font-size: 0.8rem; }
+.project-card:hover .card-dev-badge { opacity: 1; }
+
+/* Badge variants */
+.badge-ai    { background: linear-gradient(135deg, #ede9fe 0%, #dbeafe 100%); color: var(--purple-600); }
+.badge-human { background: linear-gradient(135deg, #dcfce7 0%, #dbeafe 100%); color: var(--green-600); }
+
+/* --- Extra project color variants --- */
+.project-card-indigo::before { background-color: #4f46e552; }
+.project-card-indigo:hover   { background-color: var(--indigo-600); }
+.card-icon-indigo { background: linear-gradient(to bottom right, #4f46e5, #818cf8); }
+
+.project-card-orange::before { background-color: #ea580c5c; }
+.project-card-orange:hover   { background-color: var(--orange-600); }
+.card-icon-orange { background: linear-gradient(to bottom right, #ea580c, #fb923c); }
+
+.project-card-teal::before { background-color: #0d948866; }
+.project-card-teal:hover   { background-color: #0d9488; }
+.card-icon-teal { background: linear-gradient(to bottom right, #0d9488, #2dd4bf); }
+
+/* --- GitHub Corner Styles on cards --- */
+.github-corner {
+    position: absolute;
+    top: 0;
+    left: 0; /* RTL */
+    border: 0;
+    width: 60px;
+    height: 60px;
+    z-index: 5;
+}
+.github-corner::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='80' height='80' viewBox='0 0 250 250' style='fill:%23151513; color:%23fff; transform: scale(-1, 1);' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z'/%3E%3Cpath d='M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2' fill='currentColor' style='transform-origin: 130px 106px;' class='octo-arm'/%3E%3Cpath d='M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z' fill='currentColor' class='octo-body'/%3E%3C/svg%3E");
+    background-size: contain;
+}
+
+/* Hover animation for GitHub corner */
+@keyframes octocat-wave {
+    0%, 100% { transform: rotate(0); }
+    20%, 60% { transform: rotate(-25deg); }
+    40%, 80% { transform: rotate(10deg); }
+}
+
+/* (اختیاری) اگر SVG inline استفاده شود */
+/* .github-corner:hover .octo-arm { animation: octocat-wave 560ms ease-in-out; } */

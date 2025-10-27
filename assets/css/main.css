@@ -1,0 +1,17 @@
+/* 1. Base Styles */
+@import url("base/_variables.css");
+@import url("base/_reset.css");
+@import url("base/_typography.css");
+@import url("base/_utilities.css");
+
+/* 2. Layout */
+@import url("layout/_navigation.css");
+@import url("layout/_footer.css");
+
+/* 3. Components */
+@import url("components/_buttons.css");
+@import url("components/_cards.css");
+
+/* 4. Pages */
+@import url("pages/_home.css");
+@import url("pages/_about.css");

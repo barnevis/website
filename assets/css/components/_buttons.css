@@ -1,0 +1,100 @@
+/* assets/css/components/_buttons.css */
+
+/* Base button */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hero CTA buttons (صفحه اصلی، بخش Hero و CTA) */
+.btn-hero-primary {
+    background-color: var(--white);
+    color: var(--purple-600);
+}
+.btn-hero-primary:hover {
+    background-color: var(--gray-100);
+}
+
+.btn-hero-secondary {
+    background-color: var(--purple-700);
+    color: var(--white);
+}
+.btn-hero-secondary:hover {
+    background-color: #5b21b6;
+}
+
+/* Animated buttons in project cards */
+.btn-animated {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    text-decoration: none;
+}
+
+.btn-animated span:first-child {
+    position: relative;
+    z-index: 1;
+    transition: color 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-animated span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Variants */
+.btn-demo {
+    color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f620;
+}
+.btn-demo span:last-child { background-color: #3b82f6; }
+.btn-demo:hover {
+    box-shadow: 0 0 0 2px #3b82f640;
+    color: #ffffff;
+}
+
+.btn-docs {
+    color: var(--gray-600);
+    box-shadow: 0 0 0 1px var(--gray-200);
+}
+.btn-docs span:last-child { background-color: var(--gray-900); }
+.btn-docs:hover {
+    box-shadow: 0 0 0 2px var(--gray-400);
+    color: var(--white);
+}
+
+/* Ripple growth on hover + active feedback */
+.btn-animated:hover span:last-child {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+}
+.btn-animated:active {
+    transform: scale(0.95);
+}

@@ -1,0 +1,30 @@
+/* assets/css/base/_typography.css */
+
+/* تیترهای بخش‌ها */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.section-header p {
+    max-width: 42rem;
+    margin: auto;
+    color: var(--gray-600);
+}
+
+/* متن گرادیانی (استفاده شده در AI Story) */
+.gradient-text {
+    background: linear-gradient(to right, var(--purple-600), var(--blue-600));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Responsive فقط برای تیترها */
+@media (min-width: 768px) {
+    .section-header h2 { font-size: 2.25rem; }
+}

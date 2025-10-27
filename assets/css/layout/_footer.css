@@ -1,0 +1,63 @@
+/* assets/css/layout/_footer.css */
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--gray-900);
+    color: var(--gray-300);
+    padding: 3rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    grid-template-columns: 1fr;
+}
+
+.footer-grid h3 {
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-grid ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.footer-grid ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-grid ul a:hover {
+    color: var(--white);
+}
+
+.footer-text {
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+.footer-slogan {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--white);
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--gray-800);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

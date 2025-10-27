@@ -1,0 +1,20 @@
+/* assets/css/base/_variables.css */
+:root {
+    --purple-600: #7c3aed;
+    --purple-700: #6d28d9;
+    --blue-600: #2563eb;
+    --green-600: #16a34a;
+    --orange-600: #ea580c;
+    --rose-600: #e11d48;
+    --indigo-600: #4f46e5;
+    --teal-600: #0d9488;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --white: #ffffff;
+}
