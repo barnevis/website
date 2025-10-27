@@ -1,5 +1,3 @@
-/* assets/css/layout/_navigation.css */
-
 /* --- Navigation --- */
 .main-header {
     position: sticky;
@@ -26,6 +24,7 @@
 .logo-container .logo-icon {
     height: 2.5rem;
     width: auto;
+    margin-bottom: 12px;
 }
 
 .logo-container .logo-text {

@@ -1,14 +1,15 @@
 @font-face {
   font-family: 'VazirFD';
-  src: url('/assets/fonts/Vazirmatn-FD-Regular.woff2') format('woff2'),
-       url('/assets/fonts/Vazirmatn-FD-Regular.woff') format('woff');
+  src: url('../fonts/Vazirmatn-FD-Regular.woff2') format('woff2'),
+       url('../fonts/Vazirmatn-FD-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap; 
 }
 
 @font-face {
   font-family: 'VazirFD';
-  src: url('/assets/fonts/Vazirmatn-FD-Medium.woff2') format('woff2');
+  src: url('../fonts/Vazirmatn-FD-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -16,7 +17,7 @@
 
 @font-face {
   font-family: 'VazirFD';
-  src: url('/assets/fonts/Vazirmatn-FD-Bold.woff2') format('woff2');
+  src: url('../fonts/Vazirmatn-FD-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
