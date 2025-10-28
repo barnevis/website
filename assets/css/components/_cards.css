@@ -167,5 +167,28 @@
     40%, 80% { transform: rotate(10deg); }
 }
 
-/* (اختیاری) اگر SVG inline استفاده شود */
-/* .github-corner:hover .octo-arm { animation: octocat-wave 560ms ease-in-out; } */
+/* Responsive layout for the tools grid */
+@media (min-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Responsive for value-card grid */
+@media (min-width: 768px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Responsive for team-card grid */
+@media (min-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

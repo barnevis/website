@@ -210,3 +210,32 @@
 @media (min-width: 1024px) {
     .tools-hero h1 { font-size: 4rem; }
 }
+
+/* Responsive for tool-card-grid */
+@media (min-width: 768px) {
+    .tool-card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+/* 1) گاتر (حاشیه داخلی) امن در موبایل برای بخش‌های مذکور */
+@media (max-width: 768px) {
+  .category-header,
+  .category-description,
+  .tool-card-grid,
+  .final-cta {
+    padding-inline: 1rem; /* فاصله از لبه‌های چپ/راست */
+  }
+}
+
+/* 2) جلوگیری از فشار گرید به کناره‌ها در نمایشگرهای کوچک */
+.tool-card-grid {
+  /* به‌جای minmax(320px, 1fr) از حداقل منعطف استفاده می‌کنیم تا در موبایل 100% شود */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+}
+
+/* کمی بهبود تراکم در موبایل‌های خیلی کوچک */
+@media (max-width: 480px) {
+  .tool-card-grid { gap: 1rem; }
+}
+
