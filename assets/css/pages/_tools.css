@@ -83,8 +83,7 @@
 
 /* Individual Tool Card */
 .tool-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
     border-radius: 1rem;
     padding: 1.5rem;
     display: flex;
@@ -159,50 +158,77 @@
     text-decoration: underline;
 }
 
-/* Final CTA block */
+/* Final CTA block - Styled like the main CTA sections */
 .final-cta {
-    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
-    border: 1px solid var(--purple-200);
-    padding: 2.5rem;
+    background: linear-gradient(to right, var(--purple-600), var(--blue-600));
+    color: var(--white);
+    padding: 3rem 2rem;
     border-radius: 1rem;
     text-align: center;
     margin-top: 3rem;
 }
-.final-cta h3 { font-size: 1.75rem; margin-bottom: 1rem; }
-.final-cta p { color: var(--gray-700); margin-bottom: 1.5rem; max-width: 60ch; margin-left: auto; margin-right: auto;}
+
+.final-cta h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.final-cta p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .btn-cta-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
-    background: var(--purple-600);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--purple-600);
     border-radius: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: background-color 0.3s ease;
 }
-.btn-cta-link:hover { background: var(--purple-700); }
-.btn-cta-link .material-symbols-outlined { transition: transform 0.3s ease; }
-.btn-cta-link:hover .material-symbols-outlined { transform: translateX(-4px); }
+
+.btn-cta-link:hover {
+    background-color: var(--gray-100);
+}
+
+.btn-cta-link .material-symbols-outlined {
+    transition: transform 0.3s ease;
+}
+
+.btn-cta-link:hover .material-symbols-outlined {
+    transform: translateX(-4px);
+}
 
 /* styles for new "tool-details" section */
+/* A cleaner look for tool details */
 .tool-details {
-    background-color: var(--gray-50);
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.4); /* پس‌زمینه نیمه‌شفاف سفید */
+    padding: 1rem;
+    border-radius: 0.75rem;
     margin-bottom: 1.5rem;
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px); /* افکت شیشه‌ای (اختیاری) */
 }
+
 .tool-details h4 {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--gray-600);
+    color: var(--gray-700);
     margin-bottom: 0.25rem;
     text-transform: uppercase;
 }
+
 .tool-details p {
     font-size: 0.85rem;
-    color: var(--gray-700);
+    color: var(--gray-800);
     line-height: 1.6;
 }
 
