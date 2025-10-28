@@ -21,10 +21,18 @@
     gap: 0.75rem;
 }
 
+.logo-container,
+.logo-container a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
 .logo-container .logo-icon {
     height: 2.5rem;
     width: auto;
     margin-bottom: 12px;
+    display: block;
 }
 
 .logo-container .logo-text {

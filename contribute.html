@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>همکاری با برنویس</title>
+    
+    <!-- فونت‌ها و استایل‌های اصلی -->
+    <link rel="stylesheet" href="assets/css/Vazirmatn-FD-font-face.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- استایل‌های اختصاصی این صفحه -->
+    <link rel="stylesheet" href="assets/css/pages/_contribute.css">
+</head>
+<body>
+    <!-- Navigation - همان منوی صفحات دیگر -->
+    <header class="main-header">
+        <div class="container">
+          <nav class="main-nav">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="assets/pics/logos/barnevis.svg" alt="برنویس" class="logo-icon">
+                        <span class="logo-text">برنویس</span>
+                    </a>
+                </div>
+                
+                <!-- Menu Items -->
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <button class="flex items-center dropdown-toggle">
+                            ابزارها
+                            <span class="material-symbols-outlined">expand_more</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#parsneshan">
+                                <div>پارس‌نشان</div>
+                                <div>مفسر مارک‌داون</div>
+                            </a>
+                            <a href="#dabir">
+                                <div>دبیر</div>
+                                <div>ویرایشگر کمینه‌گرا</div>
+                            </a>
+                            <a href="#parsinegar">
+                                <div>پارسی‌نگار</div>
+                                <div>ویرایشگر پیشرفته</div>
+                            </a>
+                            <a href="#zehnnegar">
+                                <div>ذهن‌نگار</div>
+                                <div>ویرایشگر نقشه‌ذهنی</div>
+                            </a>
+                            <a href="#korase">
+                                <div>کراسه</div>
+                                <div>وبلاگ</div>
+                            </a>
+                            <a href="#shahneshan">
+                                <div>شه‌نشان</div>
+                                <div>مفسر مارک‌داون</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <a href="#compare">مقایسه</a> -->
+                    <a href="#docs">سندها</a>
+                    <a href="contribute.html" class="active">همکاری</a>
+                    <a href="about.html">درباره</a>
+                </div>
+                
+                <!-- GitHub Button -->
+                <a href="https://github.com/barnevis" target="_blank" class="btn btn-github">
+                    <svg class="github-icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>گیت‌هاب</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contribute Hero Section -->
+    <section class="contribute-hero">
+        <div class="container">
+            <div class="contribute-hero-content">
+                <span class="contribute-label">به ما بپیوندید</span>
+                <h1>راه‌های همکاری با برنویس</h1>
+                <p class="contribute-lead">برنویس یک پروژه جمعی است که توسط جامعه، برای جامعه توسعه می‌یابد. هر همکاری، از گزارش یک خطا تا ساخت یک ابزار جدید، برای ما ارزشمند است.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contribution Paths Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="contribution-grid">
+                <!-- Path 1: Innovators -->
+                <div class="contribution-card">
+                    <div class="contrib-icon icon-innovate">
+                        <span class="material-symbols-outlined">emoji_objects</span>
+                    </div>
+                    <h2>ساخت ابزارهای جدید</h2>
+                    <p>اگر ایده‌ای بزرگ برای یک ابزار جدید دارید، ما نقشه راه فنی را برای شما فراهم کرده‌ایم. با رعایت اصول معماری ماژولار و افزونه‌محور، می‌توانید پروژه خود را به اکوسیستم برنویس اضافه کنید.</p>
+                    <div class="contrib-details">
+                        <h4>الزامات کلیدی:</h4>
+                        <ul>
+                            <li><span class="material-symbols-outlined">architecture</span>معماری سبک و مستقل</li>
+                            <li><span class="material-symbols-outlined">extension</span>طراحی افزونه‌محور</li>
+                            <li><span class="material-symbols-outlined">hub</span>ساختار رویداد-محور</li>
+                            <li><span class="material-symbols-outlined">translate</span>تمرکز بر زبان فارسی</li>
+                            <li><span class="material-symbols-outlined">description</span>مستندسازی جامع</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Path 2: Developers -->
+                <div class="contribution-card">
+                    <div class="contrib-icon icon-code">
+                        <span class="material-symbols-outlined">code</span>
+                    </div>
+                    <h2>همکاری در کدنویسی</h2>
+                    <p>توسعه‌دهندگان می‌توانند با ساخت افزونه برای ابزارهای موجود (مانند دبیر و شه‌نشان) یا بهبود ویژگی‌های هسته پروژه‌هایی مانند پارسی‌نگار، به رشد اکوسیستم کمک کنند.</p>
+                     <div class="contrib-details">
+                        <h4>مسیرهای مشارکت:</h4>
+                        <ul>
+                            <li><span class="material-symbols-outlined">add_circle</span>ساخت افزونه برای دبیر</li>
+                            <li><span class="material-symbols-outlined">layers</span>بهبود هسته پارسی‌نگار</li>
+                            <li><span class="material-symbols-outlined">note_add</span>افزودن قالب به کراسه</li>
+                            <li><span class="material-symbols-outlined">fork_right</span>ارسال Pull Request</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Path 3: Users & Testers -->
+                <div class="contribution-card">
+                    <div class="contrib-icon icon-feedback">
+                        <span class="material-symbols-outlined">bug_report</span>
+                    </div>
+                    <h2>بازخورد و آزمایش</h2>
+                    <p>به عنوان کاربر، شما در خط مقدم بهبود کیفیت قرار دارید. بازخورد شما مسیر توسعه پروژه‌ها را مشخص می‌کند.</p>
+                     <div class="contrib-details">
+                        <h4>چگونه کمک کنید:</h4>
+                        <ul>
+                            <li><span class="material-symbols-outlined">report</span>گزارش دقیق خطاها</li>
+                            <li><span class="material-symbols-outlined">lightbulb</span>ارائه پیشنهاد برای ویژگی‌های جدید</li>
+                            <li><span class="material-symbols-outlined">rule</span>تست نسخه‌های آزمایشی</li>
+                            <li><span class="material-symbols-outlined">question_answer</span>کمک به دیگران در انجمن‌ها</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Path 4: Designers & Content Creators -->
+                <div class="contribution-card">
+                    <div class="contrib-icon icon-design">
+                        <span class="material-symbols-outlined">design_services</span>
+                    </div>
+                    <h2>طراحی و محتوا</h2>
+                    <p>اگر در زمینه طراحی، تجربه کاربری یا تولید محتوای فنی مهارت دارید، می‌توانید به بهبود ظاهر و احساس پروژه‌ها کمک کنید.</p>
+                    <div class="contrib-details">
+                        <h4>زمینه‌های همکاری:</h4>
+                        <ul>
+                            <li><span class="material-symbols-outlined">palette</span>طراحی رابط کاربری (UI/UX)</li>
+                            <li><span class="material-symbols-outlined">image</span>خلق لوگو و آیکون‌های جدید</li>
+                            <li><span class="material-symbols-outlined">edit_document</span>بهبود مستندات و راهنماها</li>
+                            <li><span class="material-symbols-outlined">web</span>طراحی قالب‌های جدید برای کراسه</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Start Section -->
+    <section class="section-padding how-to-start-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>چگونه شروع کنیم؟</h2>
+                <p>پیوستن به جامعه برنویس ساده است. نقش خود را پیدا کنید و نخستین قدم را بردارید.</p>
+            </div>
+            <div class="start-steps-grid">
+                <div class="step-card">
+                    <div class="step-number">۱</div>
+                    <h3>نقش خود را پیدا کنید</h3>
+                    <p>بر اساس مهارت و علاقه خود، یکی از چهار مسیر اصلی همکاری (نوآوری، کدنویسی، بازخورد یا طراحی) را انتخاب کنید.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">۲</div>
+                    <h3>پروژه مورد نظر را انتخاب کنید</h3>
+                    <p>به صفحه ابزارها بروید، پروژه مورد علاقه خود را انتخاب کرده و با کلیک بر روی لینک گیت‌هاب، مخزن آن را بررسی کنید.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">۳</div>
+                    <h3>اولین مشارکت خود را ثبت کنید</h3>
+                    <p>یک Issue باز کنید، یک Pull Request ارسال کنید، یا در بحث‌ها شرکت کنید. هر فعالیتی ارزشمند است.</p>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-hero-secondary">راهنمای همکاری</a>
+                    <a href="https://github.com/barnevis" target="_blank" class="btn btn-hero-secondary">
+                        <!-- <svg class="github-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg> -->
+                        گیت‌هاب برنویس
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>برنویس
+                      <span class="footer-slogan"> - فراتر از نوشتن</span>
+                    </h3>
+                    <p class="footer-text">پروژه‌ای جمعی برای ایجاد بهترین ابزارهای نگارش فارسی. ساخته شده با همکاری توسعه‌دهندگان و هوش مصنوعی.</p>
+                </div>
+
+                <div>
+                    <h3>دسترسی سریع</h3>
+                    <ul>
+                        <li><a href="#">مستندات</a></li>
+                        <li><a href="index.html#tools">ابزارها</a></li>
+                        <li><a href="contribute.html">همکاری</a></li>
+                        <li><a href="about.html">درباره</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>جامعه</h3>
+                    <ul>
+                        <li><a href="https://github.com/barnevis">گیت‌هاب</a></li>
+                        <!-- <li><a href="#">Discord</a></li>
+                        <li><a href="#">تلگرام</a></li> -->
+                    </ul>
+                </div>
+                <div>
+                    <h3>قوانین</h3>
+                    <ul>
+                        <li><a href="#">مجوز استفاده</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© ۱۴۰۴ برنویس - ساخته شده با ❤️ برای جامعه فارسی‌زبان</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- فایل اصلی JavaScript -->
+    <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>

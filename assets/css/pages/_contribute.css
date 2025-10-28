@@ -1,0 +1,195 @@
+/* Contribute Hero Section */
+/* Contribute Hero Section */
+.contribute-hero {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* رنگ‌بندی اصلاح شد */
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contribute-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>');
+    opacity: 0.3;
+}
+
+.contribute-hero-content {
+    max-width: 52rem;
+    margin: 0 auto;
+}
+.contribute-label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.contribute-hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+.contribute-lead {
+    font-size: 1.25rem;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+/* Contribution Paths Grid */
+.contribution-grid {
+    display: grid;
+    gap: 2rem;
+    max-width: 72rem;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+}
+
+.contribution-card {
+    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%); /* گرادیان پس‌زمینه اضافه شد */
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    border: none; /* حذف border قبلی */
+}
+
+.contribution-card:hover {
+    transform: none; /* حذف افکت هاور قبلی */
+    box-shadow: none;
+}
+
+.contribution-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(30%, -30%);
+}
+
+.contrib-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.contrib-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.contrib-icon .material-symbols-outlined {
+    font-size: 2rem;
+    color: var(--white);
+}
+.icon-innovate { background: linear-gradient(135deg, var(--purple-600), var(--indigo-600)); }
+.icon-code { background: linear-gradient(135deg, var(--blue-600), #60a5fa); }
+.icon-feedback { background: linear-gradient(135deg, var(--orange-600), #fb923c); }
+.icon-design { background: linear-gradient(135deg, var(--rose-600), #f472b6); }
+
+.contribution-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+.contribution-card p {
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+}
+.contrib-details h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 0.5rem;
+}
+.contrib-details ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.9rem;
+}
+.contrib-details li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--gray-700);
+}
+.contrib-details .material-symbols-outlined {
+    font-size: 1.25rem;
+    color: var(--purple-600);
+}
+
+/* How to Start Section */
+.how-to-start-section {
+    background-color: var(--gray-50);
+}
+.start-steps-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+.step-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--gray-200);
+    position: relative;
+}
+.step-number {
+    position: absolute;
+    top: -1.25rem;
+    right: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple-600), var(--blue-600));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.step-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+}
+.step-card p {
+    color: var(--gray-600);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .contribution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .start-steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .contribute-hero h1 { font-size: 4rem; }
+}

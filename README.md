@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://barnevis.github.io">
-    <img src="assets/images/logos/barnevis.svg" alt="لوگوی برنویس" width="150">
+    <img src="assets/pics/logos/barnevis.svg" alt="لوگوی برنویس" width="150">
   </a>
 </p>
 
@@ -62,6 +62,7 @@
 ```
 .
 ├── about.html              # صفحه درباره ما
+├── contribute.html         # صفحه همکاری
 ├── index.html              # صفحه اصلی
 ├── assets/
 │   ├── css/                # فایل‌های استایل
@@ -76,6 +77,8 @@
 │   └── images/             # تصاویر
 │       ├── logos/          # لوگوی پروژه‌ها
 │       └── icons/          # آیکون‌های فناوری‌ها
+├── changelog.md            # تاریخچه تغییرات
+├── LICENSE                 # مجوز
 └── README.md
 ```
 
@@ -90,7 +93,7 @@
 ۲. **فایل `index.html` را در مرورگر خود باز کنید:**
    به پوشه پروژه بروید و فایل `index.html` را باز کنید تا وبگاه را به صورت محلی مشاهده کنید.
 
-## همیاری
+## همکاری
 
 ما از هرگونه مشارکت در پروژه برنویس استقبال می‌کنیم. شما می‌توانید از راه‌های زیر به ما کمک کنید:
 
