@@ -191,6 +191,11 @@
     color: var(--gray-600);
 }
 
+/* Responsive فقط برای Features */
+
+@media (min-width: 1024px) {
+    .features-grid { grid-template-columns: repeat(4, 1fr); }
+}
 
 /* --- AI Story Section --- */
 .ai-story-section {
@@ -391,10 +396,48 @@
     margin: auto;
 }
 
+/* Responsive */
+@media (min-width: 768px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 /* --- Home: Responsive (Hero, AI tools grid) --- */
 
+/* ≥768px (tablet & up) */
+@media (min-width: 768px) {
+    /* Hero */
+    .hero-content h1 {
+        font-size: 6rem;
+    }
+    .hero-content .hero-tagline {
+        font-size: 2.5rem;
+    }
+    .hero-content .subtitle {
+        font-size: 1.25rem;
+    }
 
+    /* AI tools grid (داخل AI Story Section) */
+    .ai-tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Tools grid moved در گام قبل انجام شد */
+}
+
+/* ≥1024px (desktop & up) */
+@media (min-width: 1024px) {
+    /* Hero */
+    .hero-content h1 {
+        font-size: 6rem; /* مطابق استایل قبلی */
+    }
+    .hero-content .hero-slogan {
+        font-size: 2rem;
+        letter-spacing: 0.15em;
+    }
+    /* features-grid در گام قبل منتقل شد */
+}
 
 /* ≤768px (mobile tweaks) */
 @media (max-width: 768px) {

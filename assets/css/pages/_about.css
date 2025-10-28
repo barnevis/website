@@ -390,14 +390,31 @@
     opacity: 0.95;
 }
 
-/* Responsive for About Page specific elements */
+/* Responsive Styles */
 @media (min-width: 768px) {
     .about-hero h1 {
         font-size: 4rem;
     }
+
+    .mission-vision-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
+
 @media (min-width: 1024px) {
     .about-hero h1 {
         font-size: 5rem;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
