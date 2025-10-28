@@ -1,9 +1,12 @@
 import { TypeWriter } from './modules/typewriter.js';
 import { initMobileMenu } from './modules/mobileMenu.js';
+import { injectHTML } from './modules/htmlInjector.js';
+import { setActiveNavLink } from './modules/navActive.js';
 
 // --- Main function to run when the page is ready ---
-function main() {
-    // Initialize mobile menu on all pages
+async function main() {
+    await injectHTML();
+    setActiveNavLink();
     initMobileMenu();
 
     // Initialize typewriter effect only on the home page
@@ -12,7 +15,6 @@ function main() {
         initTypewriterEffect(heroSection);
     }
     
-    // You can add other initializations here
 }
 
 // --- Typewriter Effect Functionality ---
