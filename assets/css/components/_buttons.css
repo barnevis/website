@@ -96,3 +96,25 @@
 .btn-animated:active {
     transform: scale(0.95);
 }
+
+/* گروه دکمه‌ها (چیدمان و مرکزچین) */
+.btn-group {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* واریانت مخصوص گیت‌هاب (هم‌استایل با دکمه‌های کارت‌ها در خانه) */
+.btn-github {
+    color: var(--gray-600);
+    box-shadow: 0 0 0 1px var(--gray-200);
+}
+.btn-github span:last-child {
+    background-color: var(--gray-900);
+}
+.btn-github:hover {
+    box-shadow: 0 0 0 2px var(--gray-400);
+    color: var(--white);
+}
+

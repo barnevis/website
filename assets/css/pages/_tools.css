@@ -1,0 +1,212 @@
+
+/* Tools Hero Section */
+.tools-hero {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* هماهنگ با خانه/درباره */
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.12); /* جداسازی ظریف از بدنه */
+}
+.tools-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90"><circle cx="45" cy="45" r="1" fill="white" opacity="0.08"/></svg>');
+    opacity: 0.35;
+}
+.tools-hero-content {
+    max-width: 52rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+.tools-hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.tools-hero h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #d6c8df;
+}
+
+.tools-lead {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.7;
+}
+@media (min-width: 1024px) {
+    .tools-hero h1 { font-size: 4rem; }
+}
+
+
+/* Tool Category Styling */
+.tool-category {
+    margin-bottom: 4rem;
+}
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid var(--gray-200);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.category-header .material-symbols-outlined {
+    font-size: 2.5rem;
+    color: var(--purple-600);
+}
+.category-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+.category-description {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    margin-bottom: 2.5rem;
+    /* max-width: 65ch; */
+}
+
+/* Tool Cards Grid */
+.tool-card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Individual Tool Card */
+.tool-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    border-color: var(--purple-200);
+}
+
+.tool-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.tool-card-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.dev-badge {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+.badge-ai { background-color: #f5f3ff; color: var(--purple-700); }
+.badge-human { background-color: #f0fdf4; color: var(--green-600); }
+
+.tool-focus {
+    font-size: 1rem;
+    color: var(--gray-700);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.tool-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+.tool-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--gray-600);
+}
+.tool-features .material-symbols-outlined {
+    font-size: 1.25rem;
+    color: var(--purple-600);
+}
+
+.tool-links {
+    margin-top: auto;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.tool-links a {
+    color: var(--blue-600);
+    text-decoration: none;
+}
+.tool-links a:hover {
+    color: var(--purple-600);
+    text-decoration: underline;
+}
+
+/* Final CTA block */
+.final-cta {
+    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
+    border: 1px solid var(--purple-200);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+.final-cta h3 { font-size: 1.75rem; margin-bottom: 1rem; }
+.final-cta p { color: var(--gray-700); margin-bottom: 1.5rem; max-width: 60ch; margin-left: auto; margin-right: auto;}
+.btn-cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--purple-600);
+    color: var(--white);
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.btn-cta-link:hover { background: var(--purple-700); }
+.btn-cta-link .material-symbols-outlined { transition: transform 0.3s ease; }
+.btn-cta-link:hover .material-symbols-outlined { transform: translateX(-4px); }
+
+/* styles for new "tool-details" section */
+.tool-details {
+    background-color: var(--gray-50);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--gray-200);
+}
+.tool-details h4 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+.tool-details p {
+    font-size: 0.85rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+    .tools-hero h1 { font-size: 4rem; }
+}

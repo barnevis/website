@@ -77,6 +77,7 @@
 │   └── images/             # تصاویر
 │       ├── logos/          # لوگوی پروژه‌ها
 │       └── icons/          # آیکون‌های فناوری‌ها
+├── components/             # فایل‌های کامپوننت‌های HTML
 ├── changelog.md            # تاریخچه تغییرات
 ├── LICENSE                 # مجوز
 └── README.md
