@@ -93,8 +93,8 @@
 
 /* Ripple growth on hover + active feedback */
 .btn-animated:hover span:last-child {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     opacity: 1;
 }
 .btn-animated:active {
