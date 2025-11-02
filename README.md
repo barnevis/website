@@ -1,6 +1,6 @@
 # وبگاه بَرنویس
 
-![پارسی‌نگار](https://img.shields.io/badge/Version-v0.1.0-blue)
+![وبگاه](https://img.shields.io/badge/Version-v0.4.0-blue)
 [![مجوز](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![زبان](https://img.shields.io/badge/Language-Persian-green)
 
