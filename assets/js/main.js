@@ -56,7 +56,6 @@ async function startTypewriterAnimation(elements) {
 
     // Fade in buttons and badge after typing
     setTimeout(() => {
-        document.querySelector('.hero-slogan')?.classList.add('fade-in');
         document.querySelector('.hero-ai-badge')?.classList.add('fade-in');
         document.querySelector('.hero-buttons')?.classList.add('fade-in');
     }, 200);
