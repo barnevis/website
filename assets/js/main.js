@@ -8,6 +8,7 @@ async function main() {
     await injectHTML();
     setActiveNavLink();
     initMobileMenu();
+    initGlowCards();
 
     // Initialize typewriter effect only on the home page
     const heroSection = document.querySelector('.hero-section');
@@ -59,6 +60,20 @@ async function startTypewriterAnimation(elements) {
         document.querySelector('.hero-ai-badge')?.classList.add('fade-in');
         document.querySelector('.hero-buttons')?.classList.add('fade-in');
     }, 200);
+}
+
+
+function initGlowCards() {
+    const cards = document.querySelectorAll('.compact-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--x', `${x}px`);
+            card.style.setProperty('--y', `${y}px`);
+        });
+    });
 }
 
 // --- Run the main function ---

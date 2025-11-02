@@ -437,3 +437,132 @@
 @media (max-width: 768px) {
     .hero-content .subtitle { min-height: 5rem; }
 }
+
+/* --- Home Tools Section (New Compact Design) --- */
+
+.compact-tools-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* واکنش‌گرایی خودکار */
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.compact-card {
+    background-color: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--gray-900);
+}
+
+.compact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    border-color: var(--purple-200);
+}
+
+.compact-card-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    background-color: var(--gray-100);
+}
+
+.compact-card-icon .material-symbols-outlined {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.compact-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.compact-card p {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* تعریف رنگ پس‌زمینه برای کارت‌هایی که لوگو دارند */
+.compact-card:has(img[alt="دبیر"]) .compact-card-icon { background: linear-gradient(to bottom right, #16a34a, #4ade80); }
+.compact-card:has(img[alt="پارسی‌نگار"]) .compact-card-icon { background: linear-gradient(to bottom right, #7c3aed, #a78bfa); }
+.compact-card:has(img[alt="شیرازه"]) .compact-card-icon { background: linear-gradient(to bottom right, var(--rose-600), #f472b6); }
+
+.compact-card-icon img {
+    padding: 0.5rem; /* کمی فاصله از لبه‌ها برای لوگوها */
+}
+
+/* CTA Button at the bottom */
+.all-tools-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.all-tools-cta .btn {
+    padding: 0.75rem 1.5rem;
+}
+
+.all-tools-cta .material-symbols-outlined {
+    transition: transform 0.3s ease;
+}
+
+.all-tools-cta .btn:hover .material-symbols-outlined {
+    transform: translateX(-4px);
+}
+
+
+/* Responsive Grid: 4 columns on large screens */
+@media (min-width: 1024px) {
+    .compact-tools-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.compact-card {
+    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
+    border: 1px solid var(--gray-200);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative; /* برای افکت نورانی */
+    overflow: hidden;   /* برای افکت نورانی */
+    text-decoration: none;
+    color: var(--gray-900);
+}
+
+.compact-card::before {
+    content: "";
+    position: absolute;
+    left: var(--x, 50%); /* متغیرهای CSS برای موقعیت موس */
+    top: var(--y, 50%);
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--glow-color, #8b5cf633) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.compact-card:hover::before {
+    opacity: 1;
+}
+
+/* تعریف رنگ نور برای هر کارت */
+.compact-card:has(.card-icon-blue) { --glow-color: #60a5fa44; }
+.compact-card:has(.card-icon-green) { --glow-color: #4ade8044; }
+.compact-card:has(.card-icon-purple) { --glow-color: #a78bfa44; }
+.compact-card:has(.card-icon-indigo) { --glow-color: #818cf844; }
+.compact-card:has(.card-icon-orange) { --glow-color: #fb923c44; }
+.compact-card:has(.card-icon-teal) { --glow-color: #2dd4bf44; }
+.compact-card:has(.icon-rose) { --glow-color: #f472b644; }
