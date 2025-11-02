@@ -108,7 +108,7 @@
 /* --- Badge on cards --- */
 .card-dev-badge {
     position: absolute;
-    top: 7rem;
+    top: 3.5rem;
     left: 1rem; /* RTL corner */
     z-index: 4;
     display: inline-flex;
