@@ -1,6 +1,6 @@
 # وبگاه بَرنویس
 
-![وبگاه](https://img.shields.io/badge/Version-v0.4.0-blue)
+![وبگاه](https://img.shields.io/badge/Version-v0.4.1-blue)
 [![مجوز](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![زبان](https://img.shields.io/badge/Language-Persian-green)
 
@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-  <a href="https://barnevis.github.io"><strong>مشاهده وبگاه زنده</strong></a>
-  <br>
+  <a href="https://barnevis.com"><strong>مشاهده وبگاه زنده</strong></a>
+<br>
 
 
 ## درباره پروژه
