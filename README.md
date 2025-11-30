@@ -85,14 +85,49 @@
 
 ## شروع به کار
 
-از آنجایی که این یک وبگاه ایستا است، برای اجرای آن نیازی به هیچ‌گونه سرور یا ابزار ساخت ندارید.
+از آنجایی که این یک وبگاه ایستا است، برای اجرای آن نیازی به هیچ‌گونه ابزار پیچیده ندارید.
 
-۱. **مخزن را کلون کنید:**
-   ```sh
-   git clone https://github.com/barnevis/website.git
-   ```
-۲. **فایل `index.html` را در مرورگر خود باز کنید:**
-   به پوشه پروژه بروید و فایل `index.html` را باز کنید تا وبگاه را به صورت محلی مشاهده کنید.
+### ۱. دانلود پروژه
+
+مخزن را کلون کنید:
+```sh
+git clone https://github.com/barnevis/website.git
+cd website
+```
+
+### ۲. اجرای محلی
+
+برای مشاهده وبگاه به صورت محلی، از یکی از روش‌های زیر استفاده کنید:
+
+#### روش ۱: استفاده از Python (توصیه می‌شود)
+```sh
+# Python 3.x
+python -m http.server 8000
+
+# یا Python 2.x
+python -m SimpleHTTPServer 8000
+```
+سپس مرورگر را باز کرده و به آدرس `http://localhost:8000` بروید.
+
+#### روش ۲: استفاده از Node.js
+```sh
+# نصب http-server (یک بار)
+npm install -g http-server
+
+# اجرا
+http-server -p 8000
+```
+
+#### روش ۳: استفاده از PHP
+```sh
+php -S localhost:8000
+```
+
+#### روش ۴: استفاده از افزونه‌های مرورگر
+- **VS Code**: افزونه [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- **Chrome/Edge**: افزونه [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
+
+> **⚠️ نکته مهم**: به دلیل استفاده از ماژول‌های ES6 و بارگذاری داینامیک HTML، باز کردن مستقیم فایل `index.html` در مرورگر (با پروتکل `file://`) کار نخواهد کرد. حتماً از یک سرور HTTP محلی استفاده کنید.
 
 ## همکاری
 
