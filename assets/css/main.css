@@ -4,6 +4,7 @@
 @import url("base/_typography.css");
 @import url("base/_utilities.css");
 @import url("base/_accessibility.css");
+@import url("base/_material-icons.css");
 
 /* 2. Layout */
 @import url("layout/_navigation.css");
