@@ -26,6 +26,7 @@
     opacity: 0.9;
     color: var(--white);
 }
+
 .hero-content .subtitle {
     font-size: 1.125rem;
     margin-bottom: 2rem;
@@ -38,13 +39,16 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.25rem 0.75rem;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     border-radius: 9999px;
     font-size: 0.875rem;
     margin-bottom: 1rem;
 }
-.hero-ai-badge .material-symbols-outlined { font-size: 1rem; }
+
+.hero-ai-badge .material-symbols-outlined {
+    font-size: 1rem;
+}
 
 /* دکمه‌های hero */
 .hero-buttons {
@@ -100,7 +104,7 @@
     border-bottom: 1px solid var(--gray-200);
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .demo-placeholder {
@@ -144,10 +148,25 @@
 }
 
 /* رنگ‌های آیکن‌ها */
-.icon-blue   { background-color: #dbeafe; color: #2563eb; }
-.icon-green  { background-color: #dcfce7; color: #16a34a; }
-.icon-purple { background-color: #ede9fe; color: #7c3aed; }
-.icon-orange { background-color: #ffedd5; color: #ea580c; }
+.icon-blue {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.icon-green {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.icon-purple {
+    background-color: #ede9fe;
+    color: #7c3aed;
+}
+
+.icon-orange {
+    background-color: #ffedd5;
+    color: #ea580c;
+}
 
 .feature-card h3 {
     font-weight: 700;
@@ -162,7 +181,9 @@
 /* Responsive فقط برای Features */
 
 @media (min-width: 1024px) {
-    .features-grid { grid-template-columns: repeat(4, 1fr); }
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* --- AI Story Section --- */
@@ -187,6 +208,7 @@
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
+
 .ai-badge .material-symbols-outlined {
     font-size: 1.25rem;
 }
@@ -196,7 +218,7 @@
 .story-content-box {
     background-color: var(--white);
     border-radius: 1rem;
-    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     margin-bottom: 3rem;
 }
@@ -207,7 +229,10 @@
     gap: 1rem;
     margin-bottom: 2rem;
 }
-.story-item:last-child { margin-bottom: 0; }
+
+.story-item:last-child {
+    margin-bottom: 0;
+}
 
 .story-item .icon-wrapper {
     flex-shrink: 0;
@@ -218,24 +243,45 @@
     align-items: center;
     justify-content: center;
 }
-.story-item .icon-wrapper .material-symbols-outlined { font-size: 1.5rem; }
+
+.story-item .icon-wrapper .material-symbols-outlined {
+    font-size: 1.5rem;
+}
 
 /* رنگ‌های کارت‌های داستان */
-.story-icon-purple { background: linear-gradient(to bottom right, #ede9fe, #dbeafe); }
-.story-icon-purple .material-symbols-outlined { color: #7c3aed; }
+.story-icon-purple {
+    background: linear-gradient(to bottom right, #ede9fe, #dbeafe);
+}
 
-.story-icon-green  { background: linear-gradient(to bottom right, #dcfce7, #a7f3d0); }
-.story-icon-green .material-symbols-outlined { color: #16a34a; }
+.story-icon-purple .material-symbols-outlined {
+    color: #7c3aed;
+}
 
-.story-icon-orange { background: linear-gradient(to bottom right, #ffedd5, #fecaca); }
-.story-icon-orange .material-symbols-outlined { color: #ea580c; }
+.story-icon-green {
+    background: linear-gradient(to bottom right, #dcfce7, #a7f3d0);
+}
+
+.story-icon-green .material-symbols-outlined {
+    color: #16a34a;
+}
+
+.story-icon-orange {
+    background: linear-gradient(to bottom right, #ffedd5, #fecaca);
+}
+
+.story-icon-orange .material-symbols-outlined {
+    color: #ea580c;
+}
 
 .story-item h3 {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
-.story-item p { color: var(--gray-600); }
+
+.story-item p {
+    color: var(--gray-600);
+}
 
 /* AI tools box */
 .ai-tools-box {
@@ -243,6 +289,7 @@
     border-radius: 1rem;
     padding: 2rem;
 }
+
 .ai-tools-box h3 {
     font-size: 1.25rem;
     font-weight: 700;
@@ -250,8 +297,14 @@
     margin-bottom: 1.5rem;
 }
 
-.ai-tools-grid { display: grid; gap: 1.5rem; }
-.ai-tool-item { text-align: center; }
+.ai-tools-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.ai-tool-item {
+    text-align: center;
+}
 
 .tool-icon-wrapper {
     width: 5rem;
@@ -263,35 +316,70 @@
     justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .ai-tool-item:hover .tool-icon-wrapper {
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.tool-icon-wrapper .material-symbols-outlined { font-size: 2.5rem; }
+
+.tool-icon-wrapper .material-symbols-outlined {
+    font-size: 2.5rem;
+}
 
 /* رنگ‌های آیکن ابزارها */
-.tool-icon-purple { background: linear-gradient(to bottom right, #ede9fe, #ddd6fe); }
-.tool-icon-purple .material-symbols-outlined { color: #7c3aed; }
+.tool-icon-purple {
+    background: linear-gradient(to bottom right, #ede9fe, #ddd6fe);
+}
 
-.tool-icon-green  { background: linear-gradient(to bottom right, #dcfce7, #bbf7d0); }
-.tool-icon-green .material-symbols-outlined  { color: #16a34a; }
+.tool-icon-purple .material-symbols-outlined {
+    color: #7c3aed;
+}
 
-.tool-icon-blue   { background: linear-gradient(to bottom right, #dbeafe, #bfdbfe); }
-.tool-icon-blue .material-symbols-outlined   { color: #2563eb; }
+.tool-icon-green {
+    background: linear-gradient(to bottom right, #dcfce7, #bbf7d0);
+}
 
-.tool-icon-orange { background: linear-gradient(to bottom right, #ffedd5, #fed7aa); }
-.tool-icon-orange .material-symbols-outlined { color: #ea580c; }
+.tool-icon-green .material-symbols-outlined {
+    color: #16a34a;
+}
 
-.tool-icon-rose   { background: linear-gradient(to bottom right, #fce7f3, #fbcfe8); }
-.tool-icon-rose .material-symbols-outlined   { color: #e11d48; }
+.tool-icon-blue {
+    background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+}
 
-.tool-icon-indigo { background: linear-gradient(to bottom right, #e0e7ff, #c7d2fe); }
-.tool-icon-indigo .material-symbols-outlined { color: #4f46e5; }
+.tool-icon-blue .material-symbols-outlined {
+    color: #2563eb;
+}
+
+.tool-icon-orange {
+    background: linear-gradient(to bottom right, #ffedd5, #fed7aa);
+}
+
+.tool-icon-orange .material-symbols-outlined {
+    color: #ea580c;
+}
+
+.tool-icon-rose {
+    background: linear-gradient(to bottom right, #fce7f3, #fbcfe8);
+}
+
+.tool-icon-rose .material-symbols-outlined {
+    color: #e11d48;
+}
+
+.tool-icon-indigo {
+    background: linear-gradient(to bottom right, #e0e7ff, #c7d2fe);
+}
+
+.tool-icon-indigo .material-symbols-outlined {
+    color: #4f46e5;
+}
 
 .ai-tool-item h4 {
     font-weight: 700;
     margin-bottom: 0.25rem;
 }
+
 .ai-tool-item p {
     font-size: 0.875rem;
     color: var(--gray-600);
@@ -305,12 +393,36 @@
     font-size: 0.75rem;
     border-radius: 9999px;
 }
-.tag-purple { background-color: #f5f3ff; color: #7c3aed; }
-.tag-green  { background-color: #f0fdf4; color: #16a34a; }
-.tag-blue   { background-color: #eff6ff; color: #2563eb; }
-.tag-orange { background-color: #fff7ed; color: #ea580c; }
-.tag-rose   { background-color: #fdf2f8; color: #e11d48; }
-.tag-indigo { background-color: #eef2ff; color: #4f46e5; }
+
+.tag-purple {
+    background-color: #f5f3ff;
+    color: #7c3aed;
+}
+
+.tag-green {
+    background-color: #f0fdf4;
+    color: #16a34a;
+}
+
+.tag-blue {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+
+.tag-orange {
+    background-color: #fff7ed;
+    color: #ea580c;
+}
+
+.tag-rose {
+    background-color: #fdf2f8;
+    color: #e11d48;
+}
+
+.tag-indigo {
+    background-color: #eef2ff;
+    color: #4f46e5;
+}
 
 /* بلوک انگیزشی انتهای بخش */
 .inspiring-message {
@@ -321,16 +433,19 @@
     padding: 2rem;
     color: var(--white);
 }
+
 .inspiring-message .material-symbols-outlined {
     font-size: 3rem;
     margin-bottom: 1rem;
     opacity: 0.8;
 }
+
 .inspiring-message h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
 }
+
 .inspiring-message p {
     font-size: 1.125rem;
     margin-bottom: 1.5rem;
@@ -375,13 +490,16 @@
 
 /* ≥768px (tablet & up) */
 @media (min-width: 768px) {
+
     /* Hero */
     .hero-content h1 {
         font-size: 6rem;
     }
+
     .hero-content .hero-tagline {
         font-size: 2.5rem;
     }
+
     .hero-content .subtitle {
         font-size: 1.25rem;
     }
@@ -396,24 +514,30 @@
 
 /* ≥1024px (desktop & up) */
 @media (min-width: 1024px) {
+
     /* Hero */
     .hero-content h1 {
-        font-size: 6rem; /* مطابق استایل قبلی */
+        font-size: 6rem;
+        /* مطابق استایل قبلی */
     }
 }
 
 /* ≤768px (mobile tweaks) */
 @media (max-width: 768px) {
+
     /* Hero */
     .hero-content .subtitle {
-        min-height: 5rem; /* جلوگیری از پرش در تایپ */
+        min-height: 5rem;
+        /* جلوگیری از پرش در تایپ */
     }
 }
 
 /* --- Home: Typewriter + Fade-in helpers --- */
 
 /* متن تایپ‌شونده */
-.typewriter-text { display: inline; }
+.typewriter-text {
+    display: inline;
+}
 
 /* مخفی‌سازی اولیه المان‌های Hero که بعداً با .fade-in آشکار می‌شن */
 .hero-ai-badge,
@@ -430,12 +554,19 @@
 }
 
 /* جلوگیری از پرش چیدمان هنگام تایپ */
-.hero-content .hero-tagline { min-height: 2rem; }
-.hero-content .subtitle { min-height: 3.5rem; }
+.hero-content .hero-tagline {
+    min-height: 2rem;
+}
+
+.hero-content .subtitle {
+    min-height: 3.5rem;
+}
 
 /* Mobile tweak */
 @media (max-width: 768px) {
-    .hero-content .subtitle { min-height: 5rem; }
+    .hero-content .subtitle {
+        min-height: 5rem;
+    }
 }
 
 /* --- Home Tools Section (New Compact Design) --- */
@@ -443,18 +574,20 @@
 .compact-tools-grid {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* واکنش‌گرایی خودکار */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     max-width: 72rem;
     margin: 0 auto;
 }
 
 .compact-card {
-    background-color: var(--white);
+    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
     border: 1px solid var(--gray-200);
     border-radius: 1rem;
     padding: 1.5rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
     text-decoration: none;
     color: var(--gray-900);
 }
@@ -463,6 +596,24 @@
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
     border-color: var(--purple-200);
+}
+
+/* افکت نورانی */
+.compact-card::before {
+    content: "";
+    position: absolute;
+    left: var(--x, 50%);
+    top: var(--y, 50%);
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--glow-color, #8b5cf633) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.compact-card:hover::before {
+    opacity: 1;
 }
 
 .compact-card-icon {
@@ -493,16 +644,53 @@
     line-height: 1.6;
 }
 
-/* تعریف رنگ پس‌زمینه برای کارت‌هایی که لوگو دارند */
-.compact-card:has(img[alt="دبیر"]) .compact-card-icon { background: linear-gradient(to bottom right, #16a34a, #4ade80); }
-.compact-card:has(img[alt="پارسی‌نگار"]) .compact-card-icon { background: linear-gradient(to bottom right, #7c3aed, #a78bfa); }
-.compact-card:has(img[alt="شیرازه"]) .compact-card-icon { background: linear-gradient(to bottom right, var(--rose-600), #f472b6); }
-
-.compact-card-icon img {
-    padding: 0.5rem; /* کمی فاصله از لبه‌ها برای لوگوها */
+/* رنگ‌های آیکون */
+.compact-card:has(img[alt="دبیر"]) .compact-card-icon {
+    background: linear-gradient(to bottom right, #16a34a, #4ade80);
 }
 
-/* CTA Button at the bottom */
+.compact-card:has(img[alt="پارسی‌نگار"]) .compact-card-icon {
+    background: linear-gradient(to bottom right, #7c3aed, #a78bfa);
+}
+
+.compact-card:has(img[alt="شیرازه"]) .compact-card-icon {
+    background: linear-gradient(to bottom right, var(--rose-600), #f472b6);
+}
+
+.compact-card-icon img {
+    padding: 0.5rem;
+}
+
+/* رنگ‌های نورانی */
+.compact-card:has(.card-icon-blue) {
+    --glow-color: #60a5fa44;
+}
+
+.compact-card:has(.card-icon-green) {
+    --glow-color: #4ade8044;
+}
+
+.compact-card:has(.card-icon-purple) {
+    --glow-color: #a78bfa44;
+}
+
+.compact-card:has(.card-icon-indigo) {
+    --glow-color: #818cf844;
+}
+
+.compact-card:has(.card-icon-orange) {
+    --glow-color: #fb923c44;
+}
+
+.compact-card:has(.card-icon-teal) {
+    --glow-color: #2dd4bf44;
+}
+
+.compact-card:has(.icon-rose) {
+    --glow-color: #f472b644;
+}
+
+/* CTA Button */
 .all-tools-cta {
     text-align: center;
     margin-top: 3rem;
@@ -520,49 +708,9 @@
     transform: translateX(-4px);
 }
 
-
-/* Responsive Grid: 4 columns on large screens */
+/* Responsive Grid */
 @media (min-width: 1024px) {
     .compact-tools-grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
-.compact-card {
-    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
-    border: 1px solid var(--gray-200);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative; /* برای افکت نورانی */
-    overflow: hidden;   /* برای افکت نورانی */
-    text-decoration: none;
-    color: var(--gray-900);
-}
-
-.compact-card::before {
-    content: "";
-    position: absolute;
-    left: var(--x, 50%); /* متغیرهای CSS برای موقعیت موس */
-    top: var(--y, 50%);
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, var(--glow-color, #8b5cf633) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.compact-card:hover::before {
-    opacity: 1;
-}
-
-/* تعریف رنگ نور برای هر کارت */
-.compact-card:has(.card-icon-blue) { --glow-color: #60a5fa44; }
-.compact-card:has(.card-icon-green) { --glow-color: #4ade8044; }
-.compact-card:has(.card-icon-purple) { --glow-color: #a78bfa44; }
-.compact-card:has(.card-icon-indigo) { --glow-color: #818cf844; }
-.compact-card:has(.card-icon-orange) { --glow-color: #fb923c44; }
-.compact-card:has(.card-icon-teal) { --glow-color: #2dd4bf44; }
-.compact-card:has(.icon-rose) { --glow-color: #f472b644; }
