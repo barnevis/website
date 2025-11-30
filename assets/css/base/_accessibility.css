@@ -1,0 +1,145 @@
+/* ===================================
+   Accessibility Improvements
+   =================================== */
+
+/* Skip to Content Link */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    background: var(--purple-600);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0 0 0 0.5rem;
+    font-weight: 600;
+    z-index: 10000;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--white);
+    outline-offset: 2px;
+}
+
+/* بهبود Focus Indicators - فقط برای keyboard navigation */
+*:focus {
+    outline: none;
+    /* حذف outline پیش‌فرض */
+}
+
+*:focus-visible {
+    outline: 2px solid var(--purple-600);
+    outline-offset: 2px;
+}
+
+/* Focus styles برای دکمه‌ها و لینک‌ها */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--purple-600);
+    outline-offset: 2px;
+}
+
+/* Focus برای کارت‌ها */
+.compact-card:focus-visible,
+.project-card:focus-visible,
+.feature-card:focus-visible {
+    outline: 2px solid var(--purple-600);
+    outline-offset: 2px;
+}
+
+/* Screen Reader Only Content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* غیرفعال کردن scroll-behavior smooth */
+    html {
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+
+    /* افزایش contrast */
+    :root {
+        --gray-50: #ffffff;
+        --gray-900: #000000;
+    }
+
+    /* حذف سایه‌ها */
+    * {
+        box-shadow: none !important;
+    }
+
+    /* حدود واضح‌تر */
+    button,
+    a,
+    input,
+    textarea {
+        border: 2px solid currentColor !important;
+    }
+}
+
+/* Keyboard Navigation Indicators */
+.nav-links a:focus-visible,
+.main-nav button:focus-visible {
+    background-color: rgba(124, 58, 237, 0.1);
+    outline: 2px solid var(--purple-600);
+}
+
+/* Mobile قMenu Focus Trap */
+.mobile-menu-btn:focus-visible {
+    outline: 2px solid var(--purple-600);
+    outline-offset: 2px;
+}
+
+/* Focus برای notification close button */
+.notification-close:focus-visible {
+    outline: 2px solid var(--purple-600);
+    outline-offset: 1px;
+}
+
+/* ARIA Live Region Styling */
+[aria-live] {
+    position: relative;
+}
+
+/* Focus برای demo toolbar buttons */
+.demo-toolbar button:focus-visible {
+    outline: 2px solid var(--purple-600);
+    outline-offset: 2px;
+    background-color: var(--gray-300);
+}
