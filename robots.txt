@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://barnevis.com/sitemap.xml
+
+# Disallow crawling of hidden files and directories
+Disallow: /.git/
+Disallow: /.gemini/
+Disallow: /*?*utm_
+
+# Allow all resources for SEO
+Allow: /assets/
+Allow: /components/
