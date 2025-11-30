@@ -1,0 +1,160 @@
+/* ===================================
+   Notification System Styles
+   =================================== */
+
+/* Container برای نوتیفیکیشن‌ها */
+.notification-container {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 500px;
+    width: calc(100% - 2rem);
+    pointer-events: none;
+}
+
+/* نوتیفیکیشن */
+.notification {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--white);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-right: 4px solid;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: all;
+}
+
+/* انیمیشن ورود */
+.notification-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* انیمیشن خروج */
+.notification-hide {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+}
+
+/* آیکون */
+.notification-icon {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+}
+
+/* پیام */
+.notification-message {
+    flex: 1;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--gray-900);
+}
+
+/* دکمه بستن */
+.notification-close {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+    color: var(--gray-400);
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+}
+
+.notification-close:hover {
+    color: var(--gray-600);
+    background: var(--gray-100);
+}
+
+.notification-close .material-symbols-outlined {
+    font-size: 1.25rem;
+}
+
+/* انواع نوتیفیکیشن */
+
+/* خطا */
+.notification-error {
+    border-right-color: #dc2626;
+}
+
+.notification-error .notification-icon {
+    color: #dc2626;
+}
+
+/* هشدار */
+.notification-warning {
+    border-right-color: #f59e0b;
+}
+
+.notification-warning .notification-icon {
+    color: #f59e0b;
+}
+
+/* اطلاعات */
+.notification-info {
+    border-right-color: #3b82f6;
+}
+
+.notification-info .notification-icon {
+    color: #3b82f6;
+}
+
+/* موفقیت */
+.notification-success {
+    border-right-color: #16a34a;
+}
+
+.notification-success .notification-icon {
+    color: #16a34a;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .notification-container {
+        top: 0.75rem;
+        width: calc(100% - 1rem);
+    }
+
+    .notification {
+        padding: 0.875rem 1rem;
+    }
+
+    .notification-message {
+        font-size: 0.875rem;
+    }
+}
+
+/* برای RTL */
+[dir="rtl"] .notification {
+    border-right: none;
+    border-left: 4px solid;
+}
+
+[dir="rtl"] .notification-error {
+    border-left-color: #dc2626;
+}
+
+[dir="rtl"] .notification-warning {
+    border-left-color: #f59e0b;
+}
+
+[dir="rtl"] .notification-info {
+    border-left-color: #3b82f6;
+}
+
+[dir="rtl"] .notification-success {
+    border-left-color: #16a34a;
+}

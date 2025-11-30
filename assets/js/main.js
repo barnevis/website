@@ -2,26 +2,34 @@ import { TypeWriter } from './modules/typewriter.js';
 import { initMobileMenu } from './modules/mobileMenu.js';
 import { injectHTML } from './modules/htmlInjector.js';
 import { setActiveNavLink } from './modules/navActive.js';
+import { setupGlobalErrorHandler, showError } from './modules/errorHandler.js';
+
+// راه‌اندازی global error handler
+setupGlobalErrorHandler();
 
 // --- Main function to run when the page is ready ---
 async function main() {
-    await injectHTML();
-    setActiveNavLink();
-    initMobileMenu();
-    initGlowCards();
+    try {
+        await injectHTML();
+        setActiveNavLink();
+        initMobileMenu();
+        initGlowCards();
 
-    // Initialize typewriter effect only on the home page
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-        initTypewriterEffect(heroSection);
+        // Initialize typewriter effect only on the home page
+        const heroSection = document.querySelector('.hero-section');
+        if (heroSection) {
+            initTypewriterEffect(heroSection);
+        }
+    } catch (error) {
+        console.error('Error in main():', error);
+        showError('خطایی در بارگذاری صفحه رخ داده است. لطفاً صفحه را مجدد بارگذاری کنید.', error);
     }
-    
 }
 
 // --- Typewriter Effect Functionality ---
 function initTypewriterEffect(heroSection) {
     const typewriterElements = document.querySelectorAll('.typewriter-text');
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {

@@ -2,3 +2,18 @@
 .section-padding {
     padding: 4rem 0;
 }
+
+/* Error Placeholder */
+.error-placeholder {
+    padding: 2rem;
+    text-align: center;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 0.5rem;
+    color: #991b1b;
+}
+
+.error-placeholder p {
+    margin: 0;
+    font-size: 0.875rem;
+}

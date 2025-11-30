@@ -11,6 +11,7 @@
 /* 3. Components */
 @import url("components/_buttons.css");
 @import url("components/_cards.css");
+@import url("components/_notifications.css");
 
 /* 4. Pages */
 @import url("pages/_home.css");
