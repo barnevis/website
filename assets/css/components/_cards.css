@@ -2,68 +2,94 @@
 
 /* Keyframes for the rotation animation */
 @keyframes rotBGimg {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .project-card {
-  position: relative;
-  display: flex;
-  place-content: center;
-  place-items: center;
-  overflow: hidden;
-  border-radius: 1rem;
-  background-color: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* The rotating spotlight element */
 .project-card::before {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 150%;
-  animation: rotBGimg 6s linear infinite;
-  transition: opacity 0.3s ease;
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 150%;
+    animation: rotBGimg 6s linear infinite;
+    transition: opacity 0.3s ease;
 }
 
 /* The inner mask that creates the border effect */
 .project-card::after {
-  content: '';
-  position: absolute;
-  background: var(--white);
-  inset: 3px; /* border width */
-  border-radius: 13px;
-  z-index: 2;
+    content: '';
+    position: absolute;
+    background: var(--white);
+    inset: 3px;
+    /* border width */
+    border-radius: 13px;
+    z-index: 2;
 }
 
 /* Color variations for the rotating spotlight */
-.project-card-blue::before { background-color: #2563eb69; }
-.project-card-green::before { background-color: #16a34a5e; }
-.project-card-purple::before { background-color: #7c3aed69; }
+.project-card-blue::before {
+    background-color: #2563eb69;
+}
+
+.project-card-green::before {
+    background-color: #16a34a5e;
+}
+
+.project-card-purple::before {
+    background-color: #7c3aed69;
+}
 
 /* Hover State */
-.project-card:hover::before { opacity: 0; }
-.project-card-blue:hover { background-color: var(--blue-600); }
-.project-card-green:hover { background-color: var(--green-600); }
-.project-card-purple:hover { background-color: var(--purple-600); }
+.project-card:hover::before {
+    opacity: 0;
+}
+
+.project-card-blue:hover {
+    background-color: var(--blue-600);
+}
+
+.project-card-green:hover {
+    background-color: var(--green-600);
+}
+
+.project-card-purple:hover {
+    background-color: var(--purple-600);
+}
 
 /* The content wrapper that sits on top of everything */
 .card-content {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  padding: 1.5rem;
-  padding-top: 2rem; /* جلوگیری از تداخل با badge */
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    /* جلوگیری از تداخل با badge */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Icon/logo blocks */
@@ -77,39 +103,72 @@
     margin-bottom: 1rem;
     border-radius: 0.5rem;
 }
+
 .card-icon-wrapper .material-symbols-outlined {
     font-size: 2rem;
     color: var(--white);
 }
+
 .card-logo-wrapper {
     padding: 0.5rem;
     background: var(--gray-50);
     border: 1px solid var(--gray-200);
 }
-.project-logo { width: 100%; height: 100%; object-fit: contain; }
+
+.project-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 /* Icon gradients */
-.card-icon-blue   { background: linear-gradient(to bottom right, #3b82f6, #60a5fa); }
-.card-icon-green  { background: linear-gradient(to bottom right, #16a34a, #4ade80); }
-.card-icon-purple { background: linear-gradient(to bottom right, #7c3aed, #a78bfa); }
+.card-icon-blue {
+    background: linear-gradient(to bottom right, #3b82f6, #60a5fa);
+}
+
+.card-icon-green {
+    background: linear-gradient(to bottom right, #16a34a, #4ade80);
+}
+
+.card-icon-purple {
+    background: linear-gradient(to bottom right, #7c3aed, #a78bfa);
+}
 
 /* Text inside card */
-.card-content h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-.card-content .card-description { color: var(--gray-600); margin-bottom: 1rem; flex-grow: 1; }
-.card-content ul { list-style: none; font-size: 0.875rem; color: var(--gray-600); padding-right: 0; margin-bottom: 1.5rem; }
+.card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-content .card-description {
+    color: var(--gray-600);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.card-content ul {
+    list-style: none;
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+}
 
 /* Buttons row inside card (layout container only) */
 .card-buttons {
     display: flex;
     gap: 0.75rem;
-    margin-top: auto; /* push to bottom */
+    margin-top: auto;
+    /* push to bottom */
 }
 
 /* --- Badge on cards --- */
 .card-dev-badge {
     position: absolute;
     top: 3.5rem;
-    left: 1rem; /* RTL corner */
+    left: 1rem;
+    /* RTL corner */
     z-index: 4;
     display: inline-flex;
     align-items: center;
@@ -121,36 +180,75 @@
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }
-.card-dev-badge .material-symbols-outlined { font-size: 0.8rem; }
-.project-card:hover .card-dev-badge { opacity: 1; }
+
+.card-dev-badge .material-symbols-outlined {
+    font-size: 0.8rem;
+}
+
+.project-card:hover .card-dev-badge {
+    opacity: 1;
+}
 
 /* Badge variants */
-.badge-ai    { background: linear-gradient(135deg, #ede9fe 0%, #dbeafe 100%); color: var(--purple-600); }
-.badge-human { background: linear-gradient(135deg, #dcfce7 0%, #dbeafe 100%); color: var(--green-600); }
+.badge-ai {
+    background: linear-gradient(135deg, #ede9fe 0%, #dbeafe 100%);
+    color: var(--purple-600);
+}
+
+.badge-human {
+    background: linear-gradient(135deg, #dcfce7 0%, #dbeafe 100%);
+    color: var(--green-600);
+}
 
 /* --- Extra project color variants --- */
-.project-card-indigo::before { background-color: #4f46e552; }
-.project-card-indigo:hover   { background-color: var(--indigo-600); }
-.card-icon-indigo { background: linear-gradient(to bottom right, #4f46e5, #818cf8); }
+.project-card-indigo::before {
+    background-color: #4f46e552;
+}
 
-.project-card-orange::before { background-color: #ea580c5c; }
-.project-card-orange:hover   { background-color: var(--orange-600); }
-.card-icon-orange { background: linear-gradient(to bottom right, #ea580c, #fb923c); }
+.project-card-indigo:hover {
+    background-color: var(--indigo-600);
+}
 
-.project-card-teal::before { background-color: #0d948866; }
-.project-card-teal:hover   { background-color: #0d9488; }
-.card-icon-teal { background: linear-gradient(to bottom right, #0d9488, #2dd4bf); }
+.card-icon-indigo {
+    background: linear-gradient(to bottom right, #4f46e5, #818cf8);
+}
+
+.project-card-orange::before {
+    background-color: #ea580c5c;
+}
+
+.project-card-orange:hover {
+    background-color: var(--orange-600);
+}
+
+.card-icon-orange {
+    background: linear-gradient(to bottom right, #ea580c, #fb923c);
+}
+
+.project-card-teal::before {
+    background-color: #0d948866;
+}
+
+.project-card-teal:hover {
+    background-color: #0d9488;
+}
+
+.card-icon-teal {
+    background: linear-gradient(to bottom right, #0d9488, #2dd4bf);
+}
 
 /* --- GitHub Corner Styles on cards --- */
 .github-corner {
     position: absolute;
     top: 0;
-    left: 0; /* RTL */
+    left: 0;
+    /* RTL */
     border: 0;
     width: 60px;
     height: 60px;
     z-index: 5;
 }
+
 .github-corner::before {
     content: '';
     display: block;
@@ -162,9 +260,21 @@
 
 /* Hover animation for GitHub corner */
 @keyframes octocat-wave {
-    0%, 100% { transform: rotate(0); }
-    20%, 60% { transform: rotate(-25deg); }
-    40%, 80% { transform: rotate(10deg); }
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    20%,
+    60% {
+        transform: rotate(-25deg);
+    }
+
+    40%,
+    80% {
+        transform: rotate(10deg);
+    }
 }
 
 /* Responsive layout for the tools grid */
@@ -180,6 +290,7 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (min-width: 1024px) {
     .values-grid {
         grid-template-columns: repeat(4, 1fr);
