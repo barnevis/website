@@ -1,9 +1,8 @@
 /* Contribute Hero Section */
-/* Contribute Hero Section */
 .contribute-hero {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* رنگ‌بندی اصلاح شد */
-    color: var(--white);
+    background: linear-gradient(135deg, var(--gradient-hero-start) 0%, var(--gradient-hero-end) 100%);
+    color: #ffffff;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -24,6 +23,7 @@
     max-width: 52rem;
     margin: 0 auto;
 }
+
 .contribute-label {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -33,11 +33,13 @@
     font-weight: 500;
     margin-bottom: 1.5rem;
 }
+
 .contribute-hero h1 {
     font-size: 3rem;
     font-weight: 900;
     margin-bottom: 1.5rem;
 }
+
 .contribute-lead {
     font-size: 1.25rem;
     opacity: 0.85;
@@ -54,16 +56,20 @@
 }
 
 .contribution-card {
-    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%); /* گرادیان پس‌زمینه اضافه شد */
+    background: var(--card-bg);
     padding: 3rem;
     border-radius: 1rem;
     position: relative;
     overflow: hidden;
-    border: none; /* حذف border قبلی */
+    border: 1px solid var(--border-primary);
+}
+
+[data-theme="light"] .contribution-card {
+    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
 }
 
 .contribution-card:hover {
-    transform: none; /* حذف افکت هاور قبلی */
+    transform: none;
     box-shadow: none;
 }
 
@@ -80,16 +86,6 @@
 }
 
 .contrib-icon {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.contrib-icon {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 0.75rem;
@@ -98,42 +94,62 @@
     justify-content: center;
     margin-bottom: 1.5rem;
 }
+
 .contrib-icon .material-symbols-outlined {
     font-size: 2rem;
-    color: var(--white);
+    color: #ffffff;
 }
-.icon-innovate { background: linear-gradient(135deg, var(--purple-600), var(--indigo-600)); }
-.icon-code { background: linear-gradient(135deg, var(--blue-600), #60a5fa); }
-.icon-feedback { background: linear-gradient(135deg, var(--orange-600), #fb923c); }
-.icon-design { background: linear-gradient(135deg, var(--rose-600), #f472b6); }
+
+.icon-innovate {
+    background: linear-gradient(135deg, var(--purple-600), var(--indigo-600));
+}
+
+.icon-code {
+    background: linear-gradient(135deg, var(--blue-600), #60a5fa);
+}
+
+.icon-feedback {
+    background: linear-gradient(135deg, var(--orange-600), #fb923c);
+}
+
+.icon-design {
+    background: linear-gradient(135deg, var(--rose-600), #f472b6);
+}
 
 .contribution-card h2 {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
+    color: var(--text-primary);
 }
+
 .contribution-card p {
-    color: var(--gray-600);
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
 }
+
 .contrib-details h4 {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    border-bottom: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--border-primary);
     padding-bottom: 0.5rem;
+    color: var(--text-primary);
 }
+
 .contrib-details ul {
     list-style: none;
     padding: 0;
     font-size: 0.9rem;
 }
+
 .contrib-details li {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
-    color: var(--gray-700);
+    color: var(--text-primary);
 }
+
 .contrib-details .material-symbols-outlined {
     font-size: 1.25rem;
     color: var(--purple-600);
@@ -141,8 +157,9 @@
 
 /* How to Start Section */
 .how-to-start-section {
-    background-color: var(--gray-50);
+    background-color: var(--bg-tertiary);
 }
+
 .start-steps-grid {
     display: grid;
     gap: 2rem;
@@ -150,13 +167,15 @@
     max-width: 72rem;
     margin: 0 auto;
 }
+
 .step-card {
-    background: var(--white);
+    background: var(--card-bg);
     padding: 2rem;
     border-radius: 1rem;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-primary);
     position: relative;
 }
+
 .step-number {
     position: absolute;
     top: -1.25rem;
@@ -165,20 +184,23 @@
     height: 2.5rem;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--purple-600), var(--blue-600));
-    color: var(--white);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
     font-weight: 700;
 }
+
 .step-card h3 {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
     margin-top: 1rem;
+    color: var(--text-primary);
 }
+
 .step-card p {
-    color: var(--gray-600);
+    color: var(--text-secondary);
 }
 
 /* Responsive */
@@ -186,10 +208,14 @@
     .contribution-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .start-steps-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 @media (min-width: 1024px) {
-    .contribute-hero h1 { font-size: 4rem; }
+    .contribute-hero h1 {
+        font-size: 4rem;
+    }
 }

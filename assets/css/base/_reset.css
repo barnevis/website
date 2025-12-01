@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: 'VazirFD', sans-serif;
-    background-color: var(--gray-50);
-    color: var(--gray-900);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     line-height: 1.6;
 }
 

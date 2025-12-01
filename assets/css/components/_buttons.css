@@ -14,19 +14,21 @@
 
 /* Hero CTA buttons (صفحه اصلی، بخش Hero و CTA) */
 .btn-hero-primary {
-    background-color: var(--white);
-    color: var(--purple-600);
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
 }
+
 .btn-hero-primary:hover {
-    background-color: var(--gray-100);
+    background-color: var(--btn-primary-hover);
 }
 
 .btn-hero-secondary {
-    background-color: var(--purple-700);
-    color: var(--white);
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-text);
 }
+
 .btn-hero-secondary:hover {
-    background-color: #5b21b6;
+    background-color: var(--btn-secondary-hover);
 }
 
 /* Animated buttons in project cards */
@@ -71,23 +73,32 @@
     color: #3b82f6;
     box-shadow: 0 0 0 1px #3b82f620;
 }
-.btn-demo span:last-child { background-color: #3b82f6; }
+
+.btn-demo span:last-child {
+    background-color: #3b82f6;
+}
+
 .btn-demo:hover {
-    box-shadow: 0 0 0 2px #3b82f640;
-    color: #ffffff;
+    box-shadow: 0 0 0 2px var(--blue-600);
+    color: var(--text-inverse);
 }
 
 /* Docs button – purple variant to match brand */
 .btn-docs {
     color: var(--purple-600);
-    box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.35); /* outline بنفش ملایم */
+    box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.35);
+    /* outline بنفش ملایم */
 }
+
 .btn-docs span:last-child {
-    background-color: var(--purple-600); /* ripple بنفش */
+    background-color: var(--purple-600);
+    /* ripple بنفش */
 }
+
 .btn-docs:hover {
     box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.45);
-    color: var(--white); /* برعکس شدن رنگ متن روی هاور */
+    color: var(--text-inverse);
+    /* برعکس شدن رنگ متن روی هاور */
 }
 
 
@@ -97,6 +108,7 @@
     height: 300px;
     opacity: 1;
 }
+
 .btn-animated:active {
     transform: scale(0.95);
 }
@@ -114,11 +126,12 @@
     color: var(--gray-600);
     box-shadow: 0 0 0 1px var(--gray-200);
 }
+
 .btn-github span:last-child {
     background-color: var(--gray-900);
 }
-.btn-github:hover {
-    box-shadow: 0 0 0 2px var(--gray-400);
-    color: var(--white);
-}
 
+.btn-github:hover {
+    box-shadow: 0 0 0 2px var(--border-secondary);
+    color: var(--text-inverse);
+}

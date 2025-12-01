@@ -1,13 +1,14 @@
 /* --- Tools Hero Section --- */
 .tools-hero {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: var(--white);
+    background: linear-gradient(135deg, var(--gradient-hero-start) 0%, var(--gradient-hero-end) 100%);
+    color: #ffffff;
     text-align: center;
     position: relative;
     overflow: hidden;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
+
 .tools-hero::before {
     content: '';
     position: absolute;
@@ -15,24 +16,29 @@
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90"><circle cx="45" cy="45" r="1" fill="white" opacity="0.08"/></svg>');
     opacity: 0.35;
 }
+
 .tools-hero-content {
     max-width: 52rem;
     margin: 0 auto;
     position: relative;
     z-index: 1;
 }
+
 .tools-hero h1 {
     font-size: 3rem;
     font-weight: 900;
     margin-bottom: 2rem;
-    color: #fff;
+    color: #ffffff;
 }
+
 .tools-hero h2 {
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 2rem;
-    color: #d6c8df;
+    color: #ffffff;
+    opacity: 0.8;
 }
+
 .tools-lead {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.92);
@@ -43,40 +49,44 @@
 .tool-category {
     margin-bottom: 4rem;
 }
+
 .category-header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    border-bottom: 2px solid var(--gray-200);
+    border-bottom: 2px solid var(--border-primary);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
+
 .category-header .material-symbols-outlined {
     font-size: 2.5rem;
     color: var(--purple-600);
 }
+
 .category-header h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--gray-900);
+    color: var(--text-primary);
 }
+
 .category-description {
     font-size: 1.1rem;
-    color: var(--gray-600);
+    color: var(--text-secondary);
     margin-bottom: 2.5rem;
 }
 
 /* --- Grid for Detailed Cards --- */
 .tool-card-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
 }
 
 /* --- Individual Detailed Card --- */
 .tool-card {
-    background: var(--white);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-primary);
     border-radius: 1rem;
     padding: 1.5rem;
     display: flex;
@@ -85,10 +95,11 @@
     position: relative;
     overflow: hidden;
 }
+
 .tool-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
-    border-color: var(--purple-200);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--purple-600);
 }
 
 .tool-card-header {
@@ -106,7 +117,7 @@
 
 .tool-focus {
     font-size: 1rem;
-    color: var(--gray-700);
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
     line-height: 1.6;
     flex-grow: 1;
@@ -117,13 +128,15 @@
     padding: 0;
     margin-bottom: 1.5rem;
 }
+
 .tool-features li {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
-    color: var(--gray-600);
+    color: var(--text-secondary);
 }
+
 .tool-features .material-symbols-outlined {
     font-size: 1.25rem;
     color: var(--green-600);
@@ -131,48 +144,55 @@
 
 /* --- A cleaner look for tool details --- */
 .tool-details {
-    background-color: rgba(249, 250, 251, 0.8);
+    background-color: var(--bg-tertiary);
     padding: 1rem;
     border-radius: 0.75rem;
     margin-bottom: 1.5rem;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-primary);
     backdrop-filter: blur(4px);
 }
+
 .tool-details h4 {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--gray-700);
+    color: var(--text-secondary);
     margin-bottom: 0.25rem;
     text-transform: uppercase;
 }
+
 .tool-details p {
     font-size: 0.85rem;
-    color: var(--gray-800);
+    color: var(--text-primary);
     line-height: 1.6;
 }
 
 /* --- Final CTA block --- */
 .cta-section {
-    background: linear-gradient(to right, var(--purple-600), var(--blue-600));
-    color: var(--white);
+    background: linear-gradient(to right, var(--gradient-cta-start), var(--gradient-cta-end));
+    color: #ffffff;
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .category-header,
-  .category-description,
-  .tool-card-grid,
-  .cta-section .container {
-    padding-inline: 1rem;
-  }
+
+    .category-header,
+    .category-description,
+    .tool-card-grid,
+    .cta-section .container {
+        padding-inline: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
-  .tool-card-grid { gap: 1rem; }
+    .tool-card-grid {
+        gap: 1rem;
+    }
 }
 
 @media (min-width: 1024px) {
-    .tools-hero h1 { font-size: 4rem; }
+    .tools-hero h1 {
+        font-size: 4rem;
+    }
 }
 
 /* --- Styles for the Tools Page Cards (Positioning) --- */
@@ -184,19 +204,15 @@
 .tool-card .card-buttons {
     margin-top: auto;
     padding-top: 1.5rem;
-    border-top: 1px solid var(--gray-100);
+    border-top: 1px solid var(--border-primary);
     justify-content: flex-start;
 }
 
-/* --- FIX: Restore Card Background Gradient --- */
-
-.tool-card {
+/* Theme-specific overrides */
+[data-theme="light"] .tool-card {
     background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
-    border: 1px solid transparent; /* Border is handled by hover */
 }
 
-/* --- FIX: Restore Tool Details Background for Contrast --- */
-.tool-details {
-    background-color: rgba(255, 255, 255, 0.4); /* پس‌زمینه نیمه‌شفاف سفید */
-    border: 1px solid rgba(255, 255, 255, 0.6);
+[data-theme="dark"] .tool-card {
+    background: var(--card-bg);
 }

@@ -3,15 +3,17 @@
     text-align: center;
     margin-bottom: 3rem;
 }
+
 .section-header h2 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
+
 .section-header p {
     max-width: 42rem;
     margin: auto;
-    color: var(--gray-600);
+    color: var(--text-secondary);
 }
 
 /* متن گرادیانی (استفاده شده در AI Story) */
@@ -24,5 +26,7 @@
 
 /* Responsive فقط برای تیترها */
 @media (min-width: 768px) {
-    .section-header h2 { font-size: 2.25rem; }
+    .section-header h2 {
+        font-size: 2.25rem;
+    }
 }

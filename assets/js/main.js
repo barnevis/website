@@ -3,6 +3,7 @@ import { initMobileMenu } from './modules/mobileMenu.js';
 import { injectHTML } from './modules/htmlInjector.js';
 import { setActiveNavLink } from './modules/navActive.js';
 import { setupGlobalErrorHandler, showError } from './modules/errorHandler.js';
+import { initThemeController, initThemeEarly } from './modules/themeController.js';
 
 // راه‌اندازی global error handler
 setupGlobalErrorHandler();
@@ -10,7 +11,15 @@ setupGlobalErrorHandler();
 // --- Main function to run when the page is ready ---
 async function main() {
     try {
+        // اعمال تم قبل از بارگذاری محتوا (جلوگیری از فلش)
+        initThemeEarly();
+
+        // بارگذاری HTML (شامل header با دکمه theme toggle)
         await injectHTML();
+
+        // حالا که header بارگذاری شده، دکمه toggle را متصل می‌کنیم
+        initThemeController();
+
         setActiveNavLink();
         initMobileMenu();
         initGlowCards();

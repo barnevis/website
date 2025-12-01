@@ -1,8 +1,8 @@
 /* --- Hero Section --- */
 .hero-section {
     padding: 5rem 0;
-    color: var(--white);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--gradient-hero-start) 0%, var(--gradient-hero-end) 100%);
 }
 
 .hero-content {
@@ -24,7 +24,7 @@
     font-weight: 600;
     margin-bottom: 2rem;
     opacity: 0.9;
-    color: var(--white);
+    color: #ffffff;
 }
 
 .hero-content .subtitle {
@@ -60,7 +60,7 @@
 
 /* --- Demo Section --- */
 .demo-section {
-    background-color: var(--gray-100);
+    background-color: var(--bg-tertiary);
 }
 
 .demo-container {
@@ -69,10 +69,10 @@
 }
 
 .demo-toolbar {
-    background-color: var(--white);
+    background-color: var(--bg-secondary);
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-primary);
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -81,8 +81,8 @@
 
 .demo-toolbar button {
     padding: 0.25rem 0.75rem;
-    background-color: var(--gray-100);
-    color: var(--gray-700);
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
     border-radius: 0.25rem;
     border: none;
     cursor: pointer;
@@ -92,23 +92,23 @@
 }
 
 .demo-toolbar button:hover {
-    background-color: var(--gray-200);
+    background-color: var(--bg-elevated);
 }
 
 .demo-editor {
     min-height: 400px;
-    background: var(--white);
+    background: var(--bg-secondary);
     padding: 1.5rem;
-    border-left: 1px solid var(--gray-200);
-    border-right: 1px solid var(--gray-200);
-    border-bottom: 1px solid var(--gray-200);
+    border-left: 1px solid var(--border-primary);
+    border-right: 1px solid var(--border-primary);
+    border-bottom: 1px solid var(--border-primary);
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-md);
 }
 
 .demo-placeholder {
-    color: var(--gray-300);
+    color: var(--text-tertiary);
     text-align: center;
     padding: 5rem 0;
 }
@@ -127,10 +127,10 @@
 }
 
 .feature-card {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 0.75rem;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--border-primary);
 }
 
 .feature-card .icon-wrapper {
@@ -149,23 +149,23 @@
 
 /* رنگ‌های آیکن‌ها */
 .icon-blue {
-    background-color: #dbeafe;
-    color: #2563eb;
+    background-color: var(--icon-blue-bg);
+    color: var(--icon-blue-fg);
 }
 
 .icon-green {
-    background-color: #dcfce7;
-    color: #16a34a;
+    background-color: var(--icon-green-bg);
+    color: var(--icon-green-fg);
 }
 
 .icon-purple {
-    background-color: #ede9fe;
-    color: #7c3aed;
+    background-color: var(--icon-purple-bg);
+    color: var(--icon-purple-fg);
 }
 
 .icon-orange {
-    background-color: #ffedd5;
-    color: #ea580c;
+    background-color: var(--icon-orange-bg);
+    color: var(--icon-orange-fg);
 }
 
 .feature-card h3 {
@@ -175,7 +175,7 @@
 
 .feature-card p {
     font-size: 0.875rem;
-    color: var(--gray-600);
+    color: var(--text-secondary);
 }
 
 /* Responsive فقط برای Features */
@@ -188,6 +188,10 @@
 
 /* --- AI Story Section --- */
 .ai-story-section {
+    background: var(--bg-tertiary);
+}
+
+[data-theme="light"] .ai-story-section {
     background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 50%, #fef2f2 100%);
 }
 
@@ -202,7 +206,7 @@
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     background: linear-gradient(to right, var(--purple-600), var(--blue-600));
-    color: var(--white);
+    color: var(--text-inverse);
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 500;
@@ -216,9 +220,9 @@
 /* .gradient-text قبلاً در base/_typography.css تعریف شده و اینجا تکرار نمی‌شود */
 
 .story-content-box {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     border-radius: 1rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-xl);
     padding: 2rem;
     margin-bottom: 3rem;
 }
@@ -250,27 +254,27 @@
 
 /* رنگ‌های کارت‌های داستان */
 .story-icon-purple {
-    background: linear-gradient(to bottom right, #ede9fe, #dbeafe);
+    background: linear-gradient(to bottom right, var(--icon-purple-bg), var(--icon-blue-bg));
 }
 
 .story-icon-purple .material-symbols-outlined {
-    color: #7c3aed;
+    color: var(--purple-600);
 }
 
 .story-icon-green {
-    background: linear-gradient(to bottom right, #dcfce7, #a7f3d0);
+    background: linear-gradient(to bottom right, var(--icon-green-bg), #a7f3d0);
 }
 
 .story-icon-green .material-symbols-outlined {
-    color: #16a34a;
+    color: var(--green-600);
 }
 
 .story-icon-orange {
-    background: linear-gradient(to bottom right, #ffedd5, #fecaca);
+    background: linear-gradient(to bottom right, var(--icon-orange-bg), var(--icon-rose-bg));
 }
 
 .story-icon-orange .material-symbols-outlined {
-    color: #ea580c;
+    color: var(--orange-600);
 }
 
 .story-item h3 {
@@ -280,12 +284,12 @@
 }
 
 .story-item p {
-    color: var(--gray-600);
+    color: var(--text-secondary);
 }
 
 /* AI tools box */
 .ai-tools-box {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     border-radius: 1rem;
     padding: 2rem;
 }
@@ -319,7 +323,7 @@
 
 .ai-tool-item:hover .tool-icon-wrapper {
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
 }
 
 .tool-icon-wrapper .material-symbols-outlined {
@@ -328,51 +332,51 @@
 
 /* رنگ‌های آیکن ابزارها */
 .tool-icon-purple {
-    background: linear-gradient(to bottom right, #ede9fe, #ddd6fe);
+    background: linear-gradient(to bottom right, var(--icon-purple-bg), #ddd6fe);
 }
 
 .tool-icon-purple .material-symbols-outlined {
-    color: #7c3aed;
+    color: var(--purple-600);
 }
 
 .tool-icon-green {
-    background: linear-gradient(to bottom right, #dcfce7, #bbf7d0);
+    background: linear-gradient(to bottom right, var(--icon-green-bg), #bbf7d0);
 }
 
 .tool-icon-green .material-symbols-outlined {
-    color: #16a34a;
+    color: var(--green-600);
 }
 
 .tool-icon-blue {
-    background: linear-gradient(to bottom right, #dbeafe, #bfdbfe);
+    background: linear-gradient(to bottom right, var(--icon-blue-bg), #bfdbfe);
 }
 
 .tool-icon-blue .material-symbols-outlined {
-    color: #2563eb;
+    color: var(--blue-600);
 }
 
 .tool-icon-orange {
-    background: linear-gradient(to bottom right, #ffedd5, #fed7aa);
+    background: linear-gradient(to bottom right, var(--icon-orange-bg), #fed7aa);
 }
 
 .tool-icon-orange .material-symbols-outlined {
-    color: #ea580c;
+    color: var(--orange-600);
 }
 
 .tool-icon-rose {
-    background: linear-gradient(to bottom right, #fce7f3, #fbcfe8);
+    background: linear-gradient(to bottom right, var(--icon-rose-bg), #fbcfe8);
 }
 
 .tool-icon-rose .material-symbols-outlined {
-    color: #e11d48;
+    color: var(--rose-600);
 }
 
 .tool-icon-indigo {
-    background: linear-gradient(to bottom right, #e0e7ff, #c7d2fe);
+    background: linear-gradient(to bottom right, var(--icon-indigo-bg), #c7d2fe);
 }
 
 .tool-icon-indigo .material-symbols-outlined {
-    color: #4f46e5;
+    color: var(--indigo-600);
 }
 
 .ai-tool-item h4 {
@@ -382,7 +386,7 @@
 
 .ai-tool-item p {
     font-size: 0.875rem;
-    color: var(--gray-600);
+    color: var(--text-secondary);
 }
 
 /* برچسب شرکت */
@@ -395,43 +399,43 @@
 }
 
 .tag-purple {
-    background-color: #f5f3ff;
-    color: #7c3aed;
+    background-color: var(--icon-purple-bg);
+    color: var(--purple-600);
 }
 
 .tag-green {
-    background-color: #f0fdf4;
-    color: #16a34a;
+    background-color: var(--icon-green-bg);
+    color: var(--green-600);
 }
 
 .tag-blue {
-    background-color: #eff6ff;
-    color: #2563eb;
+    background-color: var(--icon-blue-bg);
+    color: var(--blue-600);
 }
 
 .tag-orange {
-    background-color: #fff7ed;
-    color: #ea580c;
+    background-color: var(--icon-orange-bg);
+    color: var(--orange-600);
 }
 
 .tag-rose {
-    background-color: #fdf2f8;
-    color: #e11d48;
+    background-color: var(--icon-rose-bg);
+    color: var(--rose-600);
 }
 
 .tag-indigo {
-    background-color: #eef2ff;
-    color: #4f46e5;
+    background-color: var(--icon-indigo-bg);
+    color: var(--indigo-600);
 }
 
 /* بلوک انگیزشی انتهای بخش */
 .inspiring-message {
     margin-top: 3rem;
     text-align: center;
-    background: linear-gradient(to right, var(--purple-600), var(--blue-600));
+    background: linear-gradient(to right, var(--gradient-cta-start), var(--gradient-cta-end));
     border-radius: 1rem;
     padding: 2rem;
-    color: var(--white);
+    color: #ffffff;
 }
 
 .inspiring-message .material-symbols-outlined {
@@ -454,8 +458,8 @@
 
 /* --- CTA Section --- */
 .cta-section {
-    background: linear-gradient(to right, var(--purple-600), var(--blue-600));
-    color: var(--white);
+    background: linear-gradient(to right, var(--gradient-cta-start), var(--gradient-cta-end));
+    color: #ffffff;
 }
 
 .cta-header {
@@ -463,11 +467,11 @@
 }
 
 .cta-header h2 {
-    color: var(--white);
+    color: #ffffff;
 }
 
 .cta-header p {
-    color: var(--white);
+    color: #ffffff;
     opacity: 0.9;
 }
 
@@ -580,8 +584,8 @@
 }
 
 .compact-card {
-    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
-    border: 1px solid var(--gray-200);
+    background: var(--card-bg);
+    border: 1px solid var(--border-primary);
     border-radius: 1rem;
     padding: 1.5rem;
     text-align: center;
@@ -589,13 +593,17 @@
     position: relative;
     overflow: hidden;
     text-decoration: none;
-    color: var(--gray-900);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .compact-card {
+    background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
 }
 
 .compact-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
-    border-color: var(--purple-200);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--purple-600);
 }
 
 /* افکت نورانی */
@@ -607,7 +615,7 @@
     transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
-    background: radial-gradient(circle, var(--glow-color, #8b5cf633) 0%, transparent 70%);
+    background: radial-gradient(circle, var(--glow-color, var(--card-glow)) 0%, transparent 70%);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -624,12 +632,12 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    background-color: var(--gray-100);
+    background-color: var(--bg-tertiary);
 }
 
 .compact-card-icon .material-symbols-outlined {
     font-size: 2rem;
-    color: var(--white);
+    color: var(--text-inverse);
 }
 
 .compact-card h3 {
@@ -640,7 +648,7 @@
 
 .compact-card p {
     font-size: 0.9rem;
-    color: var(--gray-600);
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 
