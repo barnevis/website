@@ -174,10 +174,6 @@
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-
-    .category-header,
-    .category-description,
-    .tool-card-grid,
     .cta-section .container {
         padding-inline: 1rem;
     }
